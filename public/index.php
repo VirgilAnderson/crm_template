@@ -8,6 +8,7 @@
   </ol>
 </div><!-- .container mt-4 -->
 
+<!-- Tasks -->
 <div class='container'>
   <div class="row">
     <div class="container col-sm-6 mb-4">
@@ -56,7 +57,6 @@
             </ul><!-- .pagination -->
           </div><!-- .table-responsive -->
         </div><!-- .card-body -->
-
         <div class="card-footer">
           <a href="" class="btn btn-outline-info mb-2" role="button">Add new task</a>
         </div><!-- .card-footer -->
@@ -64,6 +64,8 @@
     </div><!-- .container col-sm-6 -->
     <div class="container col-sm-6 mb-4">
 
+
+      <!-- Leads -->
       <div class="card">
         <div class="card-header">
           <a href="" class="text-info"><h2><i class="fas fa-dollar-sign"></i> Leads</h2></a>
@@ -115,6 +117,8 @@
     </div><!-- .container col-sm-6 -->
   </div><!-- . row -->
 
+
+  <!-- Projects -->
   <div class="row">
     <div class="container col-12 mb-4">
       <div class="card">
