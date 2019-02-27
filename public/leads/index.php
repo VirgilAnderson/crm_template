@@ -12,8 +12,6 @@
 
 <!-- main container -->
 <div class='container'>
-  <a href="<?php echo url_for('leads/new.php'); ?>" class="btn btn-outline-info mb-2" role="button">Add new lead</a>
-  <div class="row">
     <div class="container col-12 mb-4">
       <div class="card">
         <div class="card-header">
@@ -48,12 +46,32 @@
                 </tr>
             </tbody>
             </table>
-
           </div><!-- .table-responsive -->
+
+          <!-- pagination -->
+          <ul class="pagination pagination-sm justify-content-center">
+            <li class="page-item">
+              <a class="page-link" href="#">Previous</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul><!-- .pagination -->
         </div><!-- .card-body -->
+        <div class="card-footer">
+          <a href="<?php echo url_for('leads/new.php'); ?>" class="btn btn-outline-info mb-2" role="button"><i class="far fa-plus-square"></i> new lead</a>
+        </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-12 -->
   </div><!-- . row -->
-
 </div><!-- .container -->
 <?php include('../../private/shared/footer.php'); ?>

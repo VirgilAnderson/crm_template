@@ -7,7 +7,7 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="<?php echo url_for('index.php'); ?>">Dashboard</a></li>
     <li class="breadcrumb-item"><a href="<?php echo url_for('leads/index.php'); ?>"><i class="fas fa-dollar-sign"></i> Leads</a></li>
-    <li class="breadcrumb-item active">New Lead</li>
+    <li class="breadcrumb-item active"><i class="far fa-plus-square"></i> New Lead</li>
   </ol>
 </div><!-- .container mt-4 -->
 
