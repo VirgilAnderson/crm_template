@@ -37,7 +37,7 @@
                 </tr>
               </tbody>
             </table>
-            <ul class="pagination justify-content-center">
+            <ul class="pagination pagination-sm justify-content-center">
               <li class="page-item">
                 <a class="page-link" href="#">Previous</a>
               </li>
@@ -89,7 +89,7 @@
                 </tr>
               </tbody>
             </table>
-            <ul class="pagination justify-content-center">
+            <ul class="pagination pagination-sm justify-content-center">
               <li class="page-item">
                 <a class="page-link" href="#">Previous</a>
               </li>
@@ -141,7 +141,7 @@
                 </tr>
             </tbody>
             </table>
-            <ul class="pagination justify-content-center">
+            <ul class="pagination pagination-sm justify-content-center">
               <li class="page-item">
                 <a class="page-link" href="#">Previous</a>
               </li>
