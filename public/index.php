@@ -13,7 +13,7 @@
     <div class="container col-sm-6 mb-4">
       <div class="card">
         <div class="card-header">
-          <a href="" class="text-info"><h2>Upcoming Tasks</h2></a>
+          <a href="" class="text-info"><h2><i class="fas fa-thumbtack"></i> Tasks</h2></a>
         </div><!-- .card-header -->
         <div class="card-body">
           <div class="table-responsive">
@@ -66,7 +66,7 @@
 
       <div class="card">
         <div class="card-header">
-          <a href="" class="text-info"><h2>Leads</h2></a>
+          <a href="" class="text-info"><h2><i class="fas fa-dollar-sign"></i> Leads</h2></a>
         </div><!-- .card-header -->
 
         <div class="card-body">
@@ -119,7 +119,7 @@
     <div class="container col-12 mb-4">
       <div class="card">
         <div class="card-header">
-          <h2><a href='' class="text-info">Projects</a></h2>
+          <h2><a href='' class="text-info"><i class="fas fa-project-diagram"></i> Projects</a></h2>
         </div><!-- .card-header -->
         <div class="card-body">
           <div class="table-responsive">
