@@ -8,9 +8,11 @@
   </ol>
 </div><!-- .container mt-4 -->
 
-<!-- Tasks -->
+<!-- main container -->
 <div class='container'>
   <div class="row">
+
+    <!-- Tasks -->
     <div class="container col-sm-6 mb-4">
       <div class="card">
         <div class="card-header">
@@ -58,7 +60,7 @@
           </div><!-- .table-responsive -->
         </div><!-- .card-body -->
         <div class="card-footer">
-          <a href="<?php echo url_for('new.php'); ?>" class="btn btn-outline-info mb-2" role="button">Add new task</a>
+          <a href="<?php echo url_for('leads/new.php'); ?>" class="btn btn-outline-info mb-2" role="button">Add new task</a>
         </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-6 -->
