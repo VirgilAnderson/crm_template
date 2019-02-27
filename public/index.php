@@ -20,6 +20,7 @@
             <table class="table table-hover table-sm">
               <thead>
                 <tr class='clickable-row' data-href="">
+                  <th></th>
                   <th>Title</th>
                   <th>Due Date</th>
                   <th>Status</th>
@@ -28,6 +29,7 @@
               </thead>
               <tbody>
                 <tr>
+                  <td><span class="badge badge-warning">Due Today</span></td>
                   <td>task Name</td>
                   <td>Date</td>
                   <td>task state</td>
@@ -35,6 +37,23 @@
                 </tr>
               </tbody>
             </table>
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#">Previous</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul><!-- .pagination -->
           </div><!-- .table-responsive -->
         </div><!-- .card-body -->
 
@@ -70,6 +89,23 @@
                 </tr>
               </tbody>
             </table>
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#">Previous</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul><!-- .pagination -->
           </div><!-- .table-responsive -->
         </div><!-- .card-body -->
         <div class="card-footer">
@@ -105,6 +141,23 @@
                 </tr>
             </tbody>
             </table>
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#">Previous</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul><!-- .pagination -->
           </div><!-- .table-responsive -->
         </div><!-- .card-body -->
       </div><!-- .card -->
