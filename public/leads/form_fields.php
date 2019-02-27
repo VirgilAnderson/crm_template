@@ -1,5 +1,5 @@
 <form class="col-sm-6" action=""  method="post">
-    <h2>New Lead</h2>
+    <h2><i class="far fa-plus-square"></i> New Lead</h2>
     <fieldset class="form-group">
       <legend>Fill in the form to create a new record</legend>
 
