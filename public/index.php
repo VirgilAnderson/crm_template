@@ -60,7 +60,7 @@
           </div><!-- .table-responsive -->
         </div><!-- .card-body -->
         <div class="card-footer">
-          <a href="<?php echo url_for('leads/new.php'); ?>" class="btn btn-outline-info mb-2" role="button">Add new task</a>
+          <a href="" class="btn btn-outline-info mb-2" role="button">Add new task</a>
         </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-6 -->
@@ -70,7 +70,7 @@
       <!-- Leads -->
       <div class="card">
         <div class="card-header">
-          <a href="" class="text-info"><h2><i class="fas fa-dollar-sign"></i> Leads</h2></a>
+          <a href="<?php echo url_for('leads/index.php'); ?>" class="text-info"><h2><i class="fas fa-dollar-sign"></i> Leads</h2></a>
         </div><!-- .card-header -->
 
         <div class="card-body">
@@ -113,7 +113,7 @@
           </div><!-- .table-responsive -->
         </div><!-- .card-body -->
         <div class="card-footer">
-          <a href="" class="btn btn-outline-info mb-2" role="button">Add new lead</a>
+          <a href="<?php echo url_for('leads/new.php'); ?>" class="btn btn-outline-info mb-2" role="button">Add new lead</a>
         </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-6 -->

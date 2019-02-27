@@ -1,1 +1,59 @@
 <?php require_once('../../private/initialize.php'); ?>
+<?php $page_title = "Leads"; ?>
+<?php include('../../private/shared/header.php'); ?>
+
+<!-- breadcrumbs -->
+<div class="container" style="margin-top:20px">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="<?php echo url_for('index.php'); ?>">Dashboard</a></li>
+    <li class="breadcrumb-item active"><i class="fas fa-dollar-sign"></i> Leads</li>
+  </ol>
+</div><!-- .container mt-4 -->
+
+<!-- main container -->
+<div class='container'>
+  <a href="<?php echo url_for('leads/new.php'); ?>" class="btn btn-outline-info mb-2" role="button">Add new lead</a>
+  <div class="row">
+    <div class="container col-12 mb-4">
+      <div class="card">
+        <div class="card-header">
+          <h2><i class="fas fa-dollar-sign"></i> Leads</h2>
+        </div><!-- .card-header -->
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover table-sm">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Phone</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Lead Source</th>
+                  <th>Date Added</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr class='clickable-row' data-href="">
+                  <td><span class='badge badge-info'>new</span></td>
+                  <td>first_name</td>
+                  <td>last_name</td>
+                  <td>phone_direct</td>
+                  <td>email</td>
+                  <td>role</td>
+                  <td>lead_source</td>
+                  <td>lead_birthdate</td>
+                </tr>
+            </tbody>
+            </table>
+
+          </div><!-- .table-responsive -->
+        </div><!-- .card-body -->
+      </div><!-- .card -->
+    </div><!-- .container col-sm-12 -->
+  </div><!-- . row -->
+
+</div><!-- .container -->
+<?php include('../../private/shared/footer.php'); ?>
