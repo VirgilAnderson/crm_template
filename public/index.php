@@ -4,7 +4,7 @@
 <!-- breadcrumbs -->
 <div class="container" style="margin-top:20px">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item active">Dashboard</li>
+    <li class="breadcrumb-item active"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
   </ol>
 </div><!-- .container mt-4 -->
 
