@@ -6,9 +6,10 @@
 <div class="container" style="margin-top:20px">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="<?php echo url_for('index.php'); ?>"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-    <li class="breadcrumb-item"><a href="<?php echo url_for('leads/index.php'); ?>"><i class="fas fa-dollar-sign"></i> Leads</a></li>
-    <li class="breadcrumb-item"><a href=""><i class="fas fa-info-circle"></i> Lead Detail</a></li>
-    <li class="breadcrumb-item active"><i class="far fa-trash-alt"></i> Delete Lead</li>
+    <li class="breadcrumb-item"><a href='<?php echo url_for('users/index.php'); ?>'><i class="fas fa-users"></i> Users</a></li>
+    <li class="breadcrumb-item"><a href=""><i class="fas fa-info-circle"></i> User Detail</a></li>
+    <li class="breadcrumb-item"><i class="far fa-trash-alt"></i> Delete User</li>
+  </ol>
 </div><!-- .container mt-4 -->
 
 <!-- main container -->
@@ -17,11 +18,11 @@
     <div class="container col-12 mb-4">
       <div class="card">
         <div class="card-header">
-          <h2><i class="far fa-trash-alt"></i> Delete Lead</h2>
+          <h2><i class="far fa-trash-alt"></i> Delete User</h2>
         </div><!-- .card-header -->
         <div class="card-body">
           <p>Are you sure you want to delete?</p>
-          <p>First Name</p>
+          <p>User Name</p>
           <form class="col-sm-6" action="" method="post">
             <fieldset class="form-group">
               <button class="btn btn-outline-info" type="submit">Delete</button>
@@ -31,10 +32,10 @@
         <div class="card-footer">
           <dl class="list-group-item d-flex">
             <dt class="mr-4">
-              <a class="card-link mr-4" href=""><i class="fas fa-info-circle"></i> Lead Detail</a>
+              <a class="card-link mr-4" href=""><i class="fas fa-info-circle"></i> User Detail</a>
             </dt>
             <dt>
-              <a class="card-link" href=""><i class="far fa-edit"></i> Edit Lead</a>
+              <a class="card-link" href=""><i class="far fa-edit"></i> Edit User</a>
             </dt>
           </dl>
         </div><!-- .card-footer -->
