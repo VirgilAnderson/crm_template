@@ -34,6 +34,11 @@
 </div><!-- form-group -->
 
 <div class="form-group">
+  <label class="form-control-label" for="industry">Industry</label>
+  <input class="form-control" type="text" name="industry">
+</div><!-- form-group -->
+
+<div class="form-group">
   <label for="lead_source">Lead Owner:</label>
     <select class="form-control" name="user_id">
       <?php while($admin = mysqli_fetch_assoc($admin_set)){ ?>
