@@ -42,6 +42,7 @@
                 <!-- Group pane content -->
                 <div class="card-body">
                   <div class="tab-content">
+                    <?php $active = 'lead'; ?>
                     <?php include('../../private/shared/detail_panes/lead_pane.php'); ?>
                     <?php include('../../private/shared/detail_panes/task_pane.php'); ?>
                     <?php include('../../private/shared/detail_panes/project_pane.php'); ?>

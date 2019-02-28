@@ -27,7 +27,7 @@
           <div class="row">
             <div class="col-sm-5">
               <!-- Main section Leads -->
-              <?php include('sections/lead_detail.php'); ?>
+              <?php include('detail_section/lead_detail.php'); ?>
             </div><!-- .col-sm-5  -->
 
             <!-- Group Pane Section -->
@@ -36,12 +36,13 @@
                 <div class="card-header">
 
                   <!-- Group Pane Tabs -->
-                  <?php include('sections/group_tabs.php'); ?>
+                  <?php include('detail_section/group_tabs.php'); ?>
                 </div><!-- .card-header -->
 
                 <!-- Group pane content -->
                 <div class="card-body">
                   <div class="tab-content">
+                    <?php $active = 'company'; ?>
                     <?php include('../../private/shared/detail_panes/company_pane.php'); ?>
                     <?php include('../../private/shared/detail_panes/project_pane.php'); ?>
                     <?php include('../../private/shared/detail_panes/task_pane.php'); ?>
