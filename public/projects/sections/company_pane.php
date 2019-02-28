@@ -1,4 +1,4 @@
-<div id="company_pane" class="container tab-pane active"><br>
+<div id="company_pane" class="container tab-pane"><br>
   <ul class="list-group list-group-flush">
     <dl class="list-group-item d-flex bg-light">
       <dt class="mr-4">Company Name</dt>
