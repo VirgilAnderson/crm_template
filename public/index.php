@@ -166,6 +166,9 @@
             </ul><!-- .pagination -->
           </div><!-- .table-responsive -->
         </div><!-- .card-body -->
+        <div class="card-footer">
+          <a href="<?php echo url_for('projects/new.php'); ?>" class="btn btn-outline-info mb-2" role="button"><i class="far fa-plus-square"></i> new project</a>
+        </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-12 -->
   </div><!-- . row -->
