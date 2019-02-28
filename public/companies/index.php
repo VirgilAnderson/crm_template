@@ -22,27 +22,19 @@
             <table class="table table-hover table-sm">
               <thead>
                 <tr>
-                  <th>ID</th>
                   <th>Company</th>
-                  <th>Address</th>
                   <th>City</th>
                   <th>State</th>
-                  <th>Zip</th>
                   <th>URL</th>
-                  <th>Phone</th>
                 </tr>
               </thead>
               <tbody>
 
 
                 <tr class='clickable-row' data-href="">
-                  <td>id</td>
                   <td>company_name</td>
-                  <td>company_address</td>
-                  <td>company_city</td>
-                  <td>company_state</td>
-                  <td>company_zip</td>
-                  <td>company_url</td>
+                  <td>city</td>
+                  <td>state</td>
                   <td>company_url</td>
                 </tr>
             </tbody>
