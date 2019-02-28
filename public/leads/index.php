@@ -25,11 +25,8 @@
                   <th></th>
                   <th>First Name</th>
                   <th>Last Name</th>
-                  <th>Phone</th>
-                  <th>Email</th>
                   <th>Role</th>
                   <th>Lead Source</th>
-                  <th>Date Added</th>
                 </tr>
               </thead>
               <tbody>
@@ -38,11 +35,8 @@
                   <td><span class='badge badge-info'>new</span></td>
                   <td>first_name</td>
                   <td>last_name</td>
-                  <td>phone_direct</td>
-                  <td>email</td>
                   <td>role</td>
-                  <td>lead_source</td>
-                  <td>lead_birthdate</td>
+                  <td>source</td>
                 </tr>
             </tbody>
             </table>
