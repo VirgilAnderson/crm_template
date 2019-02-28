@@ -16,13 +16,18 @@
       </div><!-- form-group -->
 
       <div class="form-group">
+        <label class="form-control-label" for="mobile_phone">Mobile</label>
+        <input class="form-control" type="text" name="mobile_phone" >
+      </div><!-- form-group -->
+
+      <div class="form-group">
         <label class="form-control-label" for="email">Email</label>
         <input class="form-control" type="text" name="email">
       </div><!-- form-group -->
 
       <div class="form-group">
-        <label class="form-control-label" for="role">Role</label>
-        <input class="form-control" type="text" name="role">
+        <label class="form-control-label" for="title">Title</label>
+        <input class="form-control" type="text" name="title">
       </div><!-- form-group -->
 
       <div class="form-group">
@@ -57,5 +62,3 @@
             <option value="" ></option>
           </select>
       </div><!-- form-group -->
-
-      
