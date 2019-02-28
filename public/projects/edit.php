@@ -17,7 +17,7 @@
         <legend>Project Information</legend>
 
         <?php include('sections/form_fields.php'); ?>
-        <button class="btn btn-outline-info" type="submit"><i class="far fa-edit"></i> Project Lead</button>
+        <button class="btn btn-outline-info" type="submit"><i class="far fa-edit"></i> Edit Project</button>
 
       </fieldset><!-- fieldset -->
     </form>
