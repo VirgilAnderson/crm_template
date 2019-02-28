@@ -34,7 +34,7 @@
             <div class="col-sm-7">
               <div class="card bg-light">
                 <div class="card-header">
-                  
+
                   <!-- Group Pane Tabs -->
                   <?php include('sections/group_tabs.php'); ?>
                 </div><!-- .card-header -->
@@ -59,7 +59,7 @@
               <a class="card-link mr-4" href="">Delete Employee</a>
             </dt>
             <dt>
-              <a class="card-link" href="">Edit Employee</a>
+              <a class="card-link" href=""><i class="far fa-edit"></i> Edit Lead</a>
             </dt>
           </dl>
         </div><!-- .card-footer -->

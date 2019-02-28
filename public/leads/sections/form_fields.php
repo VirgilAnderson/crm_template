@@ -1,7 +1,4 @@
-<form class="col-sm-6" action=""  method="post">
-    <h2><i class="far fa-plus-square"></i> New Lead</h2>
-    <fieldset class="form-group">
-      <legend>Fill in the form to create a new record</legend>
+
 
       <div class="form-group">
         <label class="form-control-label" for="first_name">First Name</label>
@@ -61,7 +58,4 @@
           </select>
       </div><!-- form-group -->
 
-      <button class="btn btn-outline-info" type="submit">Create New Lead</button>
-
-    </fieldset><!-- fieldset -->
-  </form>
+      

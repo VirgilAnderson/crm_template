@@ -13,8 +13,16 @@
 
 <!-- main container -->
 <div class='container'>
+  <form class="col-sm-6" action=""  method="post">
+      <h2><i class="far fa-plus-square"></i> New Lead</h2>
+      <fieldset class="form-group">
+        <legend>Fill in the form to create a new record</legend>
 
-  <?php include('form_fields.php'); ?>
+        <?php include('sections/form_fields.php'); ?>
 
+        <button class="btn btn-outline-info" type="submit">Create New Lead</button>
+
+      </fieldset><!-- fieldset -->
+    </form>
 </div><!-- .container -->
 <?php include('../../private/shared/footer.php'); ?>
