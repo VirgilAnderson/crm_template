@@ -16,7 +16,7 @@
     <div class="container col-sm-6 mb-4">
       <div class="card">
         <div class="card-header">
-          <a href="" class="text-info"><h2><i class="fas fa-thumbtack"></i> Tasks</h2></a>
+          <a href="<?php echo url_for('tasks/index.php'); ?>" class="text-info"><h2><i class="fas fa-thumbtack"></i> Tasks</h2></a>
         </div><!-- .card-header -->
         <div class="card-body">
           <div class="table-responsive">
@@ -60,7 +60,7 @@
           </div><!-- .table-responsive -->
         </div><!-- .card-body -->
         <div class="card-footer">
-          <a href="" class="btn btn-outline-info mb-2" role="button"><i class="far fa-plus-square"></i> new task</a>
+          <a href="<?php echo url_for('tasks/new.php'); ?>" class="btn btn-outline-info mb-2" role="button"><i class="far fa-plus-square"></i> new task</a>
         </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-6 -->
@@ -125,7 +125,7 @@
     <div class="container col-12 mb-4">
       <div class="card">
         <div class="card-header">
-          <h2><a href='' class="text-info"><i class="fas fa-project-diagram"></i> Projects</a></h2>
+          <h2><a href='<?php echo url_for('projects/index.php'); ?>' class="text-info"><i class="fas fa-project-diagram"></i> Projects</a></h2>
         </div><!-- .card-header -->
         <div class="card-body">
           <div class="table-responsive">
