@@ -16,7 +16,7 @@
       <fieldset class="form-group">
         <legend>Lead Information</legend>
 
-        <?php include('sections/form_fields.php'); ?>
+        <?php include('form_fields.php'); ?>
         <button class="btn btn-outline-info" type="submit"><i class="far fa-edit"></i> Edit Lead</button>
 
       </fieldset><!-- fieldset -->

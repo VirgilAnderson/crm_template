@@ -18,7 +18,7 @@
       <fieldset class="form-group">
         <legend>Fill in the form to create a new record</legend>
 
-        <?php include('sections/form_fields.php'); ?>
+        <?php include('form_fields.php'); ?>
 
         <button class="btn btn-outline-info" type="submit">Create New Lead</button>
 
