@@ -16,7 +16,7 @@
       <fieldset class="form-group">
         <legend>Company Information</legend>
 
-        <?php include('sections/form_fields.php'); ?>
+        <?php include('form_fields.php'); ?>
         <button class="btn btn-outline-info" type="submit"><i class="far fa-edit"></i> Edit Company</button>
 
       </fieldset><!-- fieldset -->
