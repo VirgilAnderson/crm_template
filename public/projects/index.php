@@ -30,8 +30,8 @@
               </thead>
               <tbody>
                 <tr class='clickable-row' data-href="">
-                  <td>project_title</td>
-                  <td>project_state</td>
+                  <td>title</td>
+                  <td>state</td>
                   <td>company_name</td>
                   <td>username</td>
                 </tr>
