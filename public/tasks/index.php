@@ -1,5 +1,5 @@
 <?php require_once('../../private/initialize.php'); ?>
-<?php $page_title = "Leads"; ?>
+<?php $page_title = "Tasks"; ?>
 <?php include('../../private/shared/header.php'); ?>
 
 <!-- breadcrumbs -->
@@ -64,7 +64,7 @@
           </ul><!-- .pagination -->
         </div><!-- .card-body -->
         <div class="card-footer">
-          <a href="<?php echo url_for('leads/new.php'); ?>" class="btn btn-outline-info mb-2" role="button"><i class="far fa-plus-square"></i> new task</a>
+          <a href="<?php echo url_for('tasks/new.php'); ?>" class="btn btn-outline-info mb-2" role="button"><i class="far fa-plus-square"></i> New Task</a>
         </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-12 -->
