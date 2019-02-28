@@ -1,5 +1,5 @@
 <?php require_once('../../private/initialize.php'); ?>
-<?php $page_title = "New lead"; ?>
+<?php $page_title = "New User"; ?>
 <?php include('../../private/shared/header.php'); ?>
 
 <!-- breadcrumbs -->

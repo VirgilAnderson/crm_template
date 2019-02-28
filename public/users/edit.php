@@ -1,5 +1,5 @@
 <?php require_once('../../private/initialize.php'); ?>
-<?php $page_title = "Edit lead"; ?>
+<?php $page_title = "Edit User"; ?>
 <?php include('../../private/shared/header.php'); ?>
 
 <!-- breadcrumbs -->
@@ -7,7 +7,7 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="<?php echo url_for('index.php'); ?>"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
     <li class="breadcrumb-item"><a href='<?php echo url_for('users/index.php'); ?>'><i class="fas fa-users"></i> Users</a></li>
-    <li class="breadcrumb-item"><a href=""><i class="fas fa-info-circle"></i> User Detail</a></li>
+    <li class="breadcrumb-item"><a href=""><i class="fas fa-info-circle"></i> User Details</a></li>
     <li class="breadcrumb-item"><i class="far fa-edit"></i> Edit User</li>
   </ol>
 
