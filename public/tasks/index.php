@@ -25,8 +25,6 @@
                   <th>Title</th>
                   <th>Task Type</th>
                   <th>Task State</th>
-                  <th>Employee</th>
-                  <th>Company</th>
                   <th>Due Date</th>
 
                 </tr>
@@ -36,8 +34,6 @@
                   <td>task_name</td>
                   <td>task_type</td>
                   <td>task_state</td>
-                  <td>first_name</td>
-                  <td>company_name</td>
                   <td>due_date</td>
                 </tr>
             </tbody>
