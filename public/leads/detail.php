@@ -56,7 +56,7 @@
         <div class="card-footer">
           <dl class="list-group-item d-flex">
             <dt class="mr-4">
-              <a class="card-link mr-4" href="">Delete Employee</a>
+              <a class="card-link mr-4" href=""><i class="far fa-trash-alt"></i> Delete Lead</a>
             </dt>
             <dt>
               <a class="card-link" href=""><i class="far fa-edit"></i> Edit Lead</a>
