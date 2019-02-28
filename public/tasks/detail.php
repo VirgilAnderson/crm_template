@@ -1,13 +1,13 @@
 <?php require_once('../../private/initialize.php'); ?>
-<?php $page_title = "Lead Details"; ?>
+<?php $page_title = "Task Details"; ?>
 <?php include('../../private/shared/header.php'); ?>
 
 <!-- breadcrumbs -->
 <div class="container" style="margin-top:20px">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="<?php echo url_for('index.php'); ?>"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-    <li class="breadcrumb-item"><a href="<?php echo url_for('leads/index.php'); ?>"><i class="fas fa-dollar-sign"></i> Leads</a></li>
-    <li class="breadcrumb-item active"><i class="fas fa-info-circle"></i> Lead Details</li>
+    <li class="breadcrumb-item"><a href="<?php echo url_for('tasks/index.php'); ?>"><i class="fas fa-thumbtack"></i> Tasks</a></li>
+    <li class="breadcrumb-item active"><i class="fas fa-info-circle"></i> Task Detail</li>
   </ol>
 </div><!-- .container mt-4 -->
 
@@ -21,13 +21,13 @@
 
         <!-- Card Header -->
         <div class="card-header">
-          <h2><i class="fas fa-info-circle"></i> Lead Details</h2>
+          <h2><i class="fas fa-info-circle"></i> Task Details</h2>
         </div><!-- .card-header -->
         <div class="card-body">
           <div class="row">
             <div class="col-sm-5">
               <!-- Main section Leads -->
-              <?php include('sections/lead_group.php'); ?>
+              <?php include('sections/task_pane.php'); ?>
             </div><!-- .col-sm-5  -->
 
             <!-- Group Pane Section -->
@@ -42,9 +42,9 @@
                 <!-- Group pane content -->
                 <div class="card-body">
                   <div class="tab-content">
+                    <?php include('sections/lead_group.php'); ?>
                     <?php include('sections/company_pane.php'); ?>
                     <?php include('sections/project_pane.php'); ?>
-                    <?php include('sections/task_pane.php'); ?>
                     <?php include('sections/history_pane.php'); ?>
                     <?php include('sections/note_pane.php'); ?>
                   </div><!-- .tab-content -->
@@ -56,10 +56,10 @@
         <div class="card-footer">
           <dl class="list-group-item d-flex">
             <dt class="mr-4">
-              <a class="card-link mr-4" href=""><i class="far fa-trash-alt"></i> Delete Lead</a>
+              <a class="card-link mr-4" href=""><i class="far fa-trash-alt"></i> Delete Task</a>
             </dt>
             <dt>
-              <a class="card-link" href=""><i class="far fa-edit"></i> Edit Lead</a>
+              <a class="card-link" href=""><i class="far fa-edit"></i> Edit Task</a>
             </dt>
           </dl>
         </div><!-- .card-footer -->
