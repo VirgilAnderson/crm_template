@@ -42,7 +42,7 @@
             </table>
             <ul class="pagination pagination-sm justify-content-center">
               <li class="page-item">
-                <a class="page-link" href="#">Previous</a>
+                <a class="page-link" href="#">&laquo;</a>
               </li>
               <li class="page-item">
                 <a class="page-link" href="#">1</a>
@@ -54,7 +54,7 @@
                 <a class="page-link" href="#">3</a>
               </li>
               <li class="page-item">
-                <a class="page-link" href="#">Next</a>
+                <a class="page-link" href="#">&raquo;</a>
               </li>
             </ul><!-- .pagination -->
           </div><!-- .table-responsive -->
@@ -95,7 +95,7 @@
             </table>
             <ul class="pagination pagination-sm justify-content-center">
               <li class="page-item">
-                <a class="page-link" href="#">Previous</a>
+                <a class="page-link" href="#">&laquo;</a>
               </li>
               <li class="page-item">
                 <a class="page-link" href="#">1</a>
@@ -107,7 +107,7 @@
                 <a class="page-link" href="#">3</a>
               </li>
               <li class="page-item">
-                <a class="page-link" href="#">Next</a>
+                <a class="page-link" href="#">&raquo;</a>
               </li>
             </ul><!-- .pagination -->
           </div><!-- .table-responsive -->
@@ -149,7 +149,7 @@
             </table>
             <ul class="pagination pagination-sm justify-content-center">
               <li class="page-item">
-                <a class="page-link" href="#">Previous</a>
+                <a class="page-link" href="#">&laquo;</a>
               </li>
               <li class="page-item">
                 <a class="page-link" href="#">1</a>
@@ -161,7 +161,7 @@
                 <a class="page-link" href="#">3</a>
               </li>
               <li class="page-item">
-                <a class="page-link" href="#">Next</a>
+                <a class="page-link" href="#">&raquo;</a>
               </li>
             </ul><!-- .pagination -->
           </div><!-- .table-responsive -->
