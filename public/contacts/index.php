@@ -1,12 +1,12 @@
 <?php require_once('../../private/initialize.php'); ?>
-<?php $page_title = "Leads"; ?>
+<?php $page_title = "Contacts"; ?>
 <?php include('../../private/shared/header.php'); ?>
 
 <!-- breadcrumbs -->
 <div class="container" style="margin-top:20px">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="<?php echo url_for('index.php'); ?>"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-    <li class="breadcrumb-item active"><i class="fas fa-dollar-sign"></i> Leads</li>
+    <li class="breadcrumb-item active"><i class="far fa-handshake"></i> Contacts</li>
   </ol>
 </div><!-- .container mt-4 -->
 
@@ -15,7 +15,7 @@
     <div class="container col-12 mb-4">
       <div class="card">
         <div class="card-header">
-          <h2><i class="fas fa-dollar-sign"></i> Leads</h2>
+          <h2><i class="far fa-handshake"></i> Contacts</h2>
         </div><!-- .card-header -->
         <div class="card-body">
           <div class="table-responsive">
@@ -62,7 +62,7 @@
           </ul><!-- .pagination -->
         </div><!-- .card-body -->
         <div class="card-footer">
-          <a href="<?php echo url_for('leads/new.php'); ?>" class="btn btn-outline-info mb-2" role="button"><i class="far fa-plus-square"></i> new lead</a>
+          <a href="<?php echo url_for('Contacts/new.php'); ?>" class="btn btn-outline-info mb-2" role="button"><i class="far fa-plus-square"></i> new lead</a>
         </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-12 -->
