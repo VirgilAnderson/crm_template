@@ -15,7 +15,18 @@
     <div class="container col-12 mb-4">
       <div class="card">
         <div class="card-header">
-          <h2><i class="fas fa-dollar-sign"></i> Leads</h2>
+          <div class='row'>
+            <div class='col-sm'>
+              <h2><i class="fas fa-dollar-sign"></i> Leads</h2>
+            </div><!-- .col -->
+            <div class='col-sm'>
+              <!-- Search Form -->
+              <form class="form-inline my-2 my-sm-0 d-flex justify-content-end">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search Leads...">
+                <button class="btn btn-outline-dark my-2 my-sm-0" type="button"><i class="fas fa-search"></i></button>
+              </form>
+            </div><!-- .col-sm -->
+          </div><!-- .row -->
         </div><!-- .card-header -->
         <div class="card-body">
           <div class="table-responsive">

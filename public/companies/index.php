@@ -15,6 +15,18 @@
     <div class="container col-12 mb-4">
       <div class="card">
         <div class="card-header">
+          <div class='row'>
+            <div class='col-sm'>
+
+            </div><!-- .col -->
+            <div class='col-sm'>
+              <!-- Search Form -->
+              <form class="form-inline my-2 my-sm-0 d-flex justify-content-end">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-dark my-2 my-sm-0" type="button"><i class="fas fa-search"></i></button>
+              </form>
+            </div><!-- .col-sm -->
+          </div><!-- .row -->
           <h2><i class="far fa-building"></i> Companies</h2>
         </div><!-- .card-header -->
         <div class="card-body">
