@@ -43,7 +43,7 @@
           <!-- pagination -->
           <ul class="pagination pagination-sm justify-content-center">
             <li class="page-item">
-              <a class="page-link" href="#">&laquo;</a>
+              <a class="page-link" href="#"><i class="fas fa-backward"></i></a>
             </li>
             <li class="page-item">
               <a class="page-link" href="#">1</a>
@@ -55,7 +55,7 @@
               <a class="page-link" href="#">3</a>
             </li>
             <li class="page-item">
-              <a class="page-link" href="#">&raquo;</a>
+              <a class="page-link" href="#"><i class="fas fa-forward"></i></a>
             </li>
           </ul><!-- .pagination -->
         </div><!-- .card-body -->
