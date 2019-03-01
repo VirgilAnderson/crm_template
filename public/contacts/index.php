@@ -26,7 +26,7 @@
                   <th>First Name</th>
                   <th>Last Name</th>
                   <th>Role</th>
-                  <th>Lead Source</th>
+                  <th>Contact Source</th>
                 </tr>
               </thead>
               <tbody>
@@ -62,7 +62,7 @@
           </ul><!-- .pagination -->
         </div><!-- .card-body -->
         <div class="card-footer">
-          <a href="<?php echo url_for('Contacts/new.php'); ?>" class="btn btn-outline-info mb-2" role="button"><i class="far fa-plus-square"></i> new lead</a>
+          <a href="<?php echo url_for('Contacts/new.php'); ?>" class="btn btn-outline-info mb-2" role="button"><i class="far fa-plus-square"></i> new Contact</a>
         </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-12 -->

@@ -1,13 +1,13 @@
 <?php require_once('../../private/initialize.php'); ?>
-<?php $page_title = "Lead Details"; ?>
+<?php $page_title = "Contact Details"; ?>
 <?php include('../../private/shared/header.php'); ?>
 
 <!-- breadcrumbs -->
 <div class="container" style="margin-top:20px">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="<?php echo url_for('index.php'); ?>"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-    <li class="breadcrumb-item"><a href="<?php echo url_for('leads/index.php'); ?>"><i class="fas fa-dollar-sign"></i> Leads</a></li>
-    <li class="breadcrumb-item active"><i class="fas fa-info-circle"></i> Lead Details</li>
+    <li class="breadcrumb-item"><a href="<?php echo url_for('Contacts/index.php'); ?>"><i class="far fa-handshake"></i> Contacts</a></li>
+    <li class="breadcrumb-item active"><i class="fas fa-info-circle"></i> Contact Details</li>
   </ol>
 </div><!-- .container mt-4 -->
 
@@ -15,19 +15,19 @@
 <div class='container'>
   <div class="row">
 
-    <!-- Lead Card -->
+    <!-- Contact Card -->
     <div class="container col-12 mb-4">
       <div class="card">
 
         <!-- Card Header -->
         <div class="card-header">
-          <h2><i class="fas fa-info-circle"></i> Lead Details</h2>
+          <h2><i class="fas fa-info-circle"></i> Contact Details</h2>
         </div><!-- .card-header -->
         <div class="card-body">
           <div class="row">
             <div class="col-sm-5">
-              <!-- Main section Leads -->
-              <?php include('detail_section/lead_detail.php'); ?>
+              <!-- Main section Contacts -->
+              <?php include('detail_section/Contact_detail.php'); ?>
             </div><!-- .col-sm-5  -->
 
             <!-- Group Pane Section -->
@@ -56,9 +56,9 @@
         </div><!-- .card-body -->
         <div class="card-footer">
           <div class="btn-group">
-            <button type="button" class="btn btn-outline-info"><i class="far fa-plus-square"></i> New Lead</button>
-            <button type="button" class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Lead</button>
-            <button type="button" class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Lead</button>
+            <button type="button" class="btn btn-outline-info"><i class="far fa-plus-square"></i> New Contact</button>
+            <button type="button" class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Contact</button>
+            <button type="button" class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Contact</button>
           </div>
         </div><!-- .card-footer -->
       </div><!-- .card -->
