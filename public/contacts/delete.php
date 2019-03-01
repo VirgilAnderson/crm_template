@@ -24,19 +24,15 @@
           <p>First Name</p>
           <form class="col-sm-6" action="" method="post">
             <fieldset class="form-group">
-              <button class="btn btn-outline-info" type="submit">Delete</button>
+              <button class="btn btn-outline-info" type="submit"><i class="far fa-trash-alt"></i> Delete</button>
             </fieldset><!-- fieldset -->
           </form>
         </div><!-- .card-body -->
         <div class="card-footer">
-          <dl class="list-group-item d-flex">
-            <dt class="mr-4">
-              <a class="card-link mr-4" href=""><i class="fas fa-info-circle"></i> Contact Detail</a>
-            </dt>
-            <dt>
-              <a class="card-link" href=""><i class="far fa-edit"></i> Edit Contact</a>
-            </dt>
-          </dl>
+          <div class="btn-group">
+            <button type="button" class="btn btn-outline-info"><i class="fas fa-info-circle"></i> Contact Detail</button>
+            <button type="button" class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Contact</button>
+          </div>
         </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-12 -->

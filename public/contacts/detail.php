@@ -36,18 +36,14 @@
                 <div class="card-header">
 
                   <!-- Group Pane Tabs -->
-                  <?php include('detail_section/group_tabs.php'); ?>
+                  <?php $selected = 'contact'; ?>
+                  <?php include('../../private/shared/detail_panes/group_tabs.php'); ?>
                 </div><!-- .card-header -->
 
                 <!-- Group pane content -->
                 <div class="card-body">
                   <div class="tab-content">
-                    <?php $active = 'company'; ?>
-                    <?php include('../../private/shared/detail_panes/company_pane.php'); ?>
-                    <?php include('../../private/shared/detail_panes/project_pane.php'); ?>
-                    <?php include('../../private/shared/detail_panes/task_pane.php'); ?>
-                    <?php include('../../private/shared/detail_panes/history_pane.php'); ?>
-                    <?php include('../../private/shared/detail_panes/note_pane.php'); ?>
+                    <?php include('../../private/shared/detail_panes/panes.php'); ?>
                   </div><!-- .tab-content -->
                 </div><!-- .card-body -->
               </div><!-- .card -->

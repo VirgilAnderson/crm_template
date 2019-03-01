@@ -15,7 +15,7 @@
 <div class='container'>
   <div class="row">
 
-    <!-- Lead Card -->
+    <!-- Contact Card -->
     <div class="container col-12 mb-4">
       <div class="card">
 
@@ -26,7 +26,7 @@
         <div class="card-body">
           <div class="row">
             <div class="col-sm-5">
-              <!-- Main section Leads -->
+              <!-- Main section Contacts -->
               <?php include('detail_section/company_detail.php'); ?>
             </div><!-- .col-sm-5  -->
 
@@ -36,18 +36,14 @@
                 <div class="card-header">
 
                   <!-- Group Pane Tabs -->
-                  <?php include('detail_section/group_tabs.php'); ?>
+                  <?php $selected = 'company'; ?>
+                  <?php include('../../private/shared/detail_panes/group_tabs.php'); ?>
                 </div><!-- .card-header -->
 
                 <!-- Group pane content -->
                 <div class="card-body">
                   <div class="tab-content">
-                    <?php $active = 'lead'; ?>
-                    <?php include('../../private/shared/detail_panes/lead_pane.php'); ?>
-                    <?php include('../../private/shared/detail_panes/task_pane.php'); ?>
-                    <?php include('../../private/shared/detail_panes/project_pane.php'); ?>
-                    <?php include('../../private/shared/detail_panes/history_pane.php'); ?>
-                    <?php include('../../private/shared/detail_panes/note_pane.php'); ?>
+                    <?php include('../../private/shared/detail_panes/panes.php'); ?>
                   </div><!-- .tab-content -->
                 </div><!-- .card-body -->
               </div><!-- .card -->
