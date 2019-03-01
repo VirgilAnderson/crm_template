@@ -55,14 +55,10 @@
           </div><!-- .row -->
         </div><!-- .card-body -->
         <div class="card-footer">
-          <dl class="list-group-item d-flex">
-            <dt class="mr-4">
-              <a class="card-link mr-4" href=""><i class="far fa-trash-alt"></i> Delete Company</a>
-            </dt>
-            <dt>
-              <a class="card-link" href=""><i class="far fa-edit"></i> Edit Company</a>
-            </dt>
-          </dl>
+          <div class="btn-group">
+            <button type="button" class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Company</button>
+            <button type="button" class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Company</button>
+          </div>
         </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-12 -->
