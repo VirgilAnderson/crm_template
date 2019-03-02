@@ -25,19 +25,15 @@
           <p>User Name</p>
           <form class="col-sm-6" action="" method="post">
             <fieldset class="form-group">
-              <button class="btn btn-outline-info" type="submit">Delete</button>
+              <button class="btn btn-outline-info" type="submit"><i class="far fa-trash-alt"></i> Delete</button>
             </fieldset><!-- fieldset -->
           </form>
         </div><!-- .card-body -->
         <div class="card-footer">
-          <dl class="list-group-item d-flex">
-            <dt class="mr-4">
-              <a class="card-link mr-4" href=""><i class="fas fa-info-circle"></i> User Detail</a>
-            </dt>
-            <dt>
-              <a class="card-link" href=""><i class="far fa-edit"></i> Edit User</a>
-            </dt>
-          </dl>
+          <div class='btn-group'>
+            <a href='<?php echo url_for('users/detail.php'); ?>' class="btn btn-outline-info"><i class="fas fa-info-circle"></i> User Detail</a>
+            <a href='<?php echo url_for('users/edit.php'); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit User</a>
+          </div><!-- .btn-group -->
         </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-12 -->

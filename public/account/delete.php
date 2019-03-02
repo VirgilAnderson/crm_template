@@ -25,7 +25,7 @@
           <p>Account Name</p>
           <form class="col-sm-6" action="" method="post">
             <fieldset class="form-group">
-              <button class="btn btn-outline-info" type="submit">Delete</button>
+              <button class="btn btn-outline-info" type="submit"><i class="far fa-trash-alt"></i> Delete</button>
             </fieldset><!-- fieldset -->
           </form>
         </div><!-- .card-body -->

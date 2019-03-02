@@ -29,10 +29,10 @@
           </form>
         </div><!-- .card-body -->
         <div class="card-footer">
-          <div class="btn-group">
-            <button type="button" class="btn btn-outline-info"><i class="fas fa-info-circle"></i> Contact Detail</button>
-            <button type="button" class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Contact</button>
-          </div>
+          <div class='btn-group'>
+            <a href='<?php echo url_for('contacts/detail.php'); ?>' class="btn btn-outline-info"><i class="fas fa-info-circle"></i> Contact Detail</a>
+            <a href='<?php echo url_for('contacts/edit.php'); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Contact</a>
+          </div><!-- .btn-group -->
         </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-12 -->
