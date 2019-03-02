@@ -50,17 +50,11 @@
           </div><!-- .row -->
         </div><!-- .card-body -->
         <div class="card-footer">
-          <div class="btn-group">
-            <form action='<?php echo url_for('notes/new.php'); ?>'>
-              <button type="submit" class="btn btn-outline-info"><i class="far fa-plus-square"></i> New Note</button>
-            </form>
-            <form action='<?php echo url_for('notes/delete.php'); ?>'>
-              <button type="submit" class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Note</button>
-            </form>
-            <form action='<?php echo url_for('notes/edit.php'); ?>'>
-              <button type="submit" class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Note</button>
-            </form>
-          </div>
+          <div class='btn-group'>
+            <a href='<?php echo url_for('notes/new.php'); ?>' class="btn btn-outline-info"><i class="far fa-plus-square"></i> New Note</a>
+            <a href='<?php echo url_for('notes/delete.php'); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Note</a>
+            <a href='<?php echo url_for('notes/edit.php'); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Note</a>
+          </div><!-- .btn-group -->
         </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-12 -->
