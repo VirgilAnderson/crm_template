@@ -51,11 +51,11 @@
           </div><!-- .row -->
         </div><!-- .card-body -->
         <div class="card-footer">
-          <div class="btn-group">
-            <button type="button" class="btn btn-outline-info"><i class="far fa-plus-square"></i> New Contact</button>
-            <button type="button" class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Contact</button>
-            <button type="button" class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Contact</button>
-          </div>
+          <div class='btn-group'>
+            <a href='<?php echo url_for('Contacts/new.php'); ?>' class="btn btn-outline-info"><i class="far fa-plus-square"></i> New Contact</a>
+            <a href='<?php echo url_for('Contacts/delete.php'); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Contact</a>
+            <a href='<?php echo url_for('Contacts/edit.php'); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Contact</a>
+          </div><!-- .btn-group -->
         </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-12 -->

@@ -51,11 +51,11 @@
           </div><!-- .row -->
         </div><!-- .card-body -->
         <div class="card-footer">
-          <div class="btn-group">
-            <button type="button" class="btn btn-outline-info"><i class="far fa-plus-square"></i> New Task</button>
-            <button type="button" class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Task</button>
-            <button type="button" class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Task</button>
-          </div>
+          <div class='btn-group'>
+            <a href='<?php echo url_for('Tasks/new.php'); ?>' class="btn btn-outline-info"><i class="far fa-plus-square"></i> New Task</a>
+            <a href='<?php echo url_for('Tasks/delete.php'); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Task</a>
+            <a href='<?php echo url_for('Tasks/edit.php'); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Task</a>
+          </div><!-- .btn-group -->
         </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-12 -->

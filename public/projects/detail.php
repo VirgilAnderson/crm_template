@@ -51,10 +51,10 @@
           </div><!-- .row -->
         </div><!-- .card-body -->
         <div class="card-footer">
-          <div class="btn-group">
-            <button type="button" class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Project</button>
-            <button type="button" class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Project</button>
-          </div>
+          <div class='btn-group'>
+            <a href='<?php echo url_for('Projects/delete.php'); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Project</a>
+            <a href='<?php echo url_for('Projects/edit.php'); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Project</a>
+          </div><!-- .btn-group -->
         </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-12 -->

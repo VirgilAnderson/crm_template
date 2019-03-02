@@ -44,12 +44,12 @@
             <dd>Username</dd>
           </dl>
         </div><!-- .card-body -->
-        <div class="card-footer">
-          <div class="btn-group">
-            <button type="button" class="btn btn-outline-info"><i class="far fa-plus-square"></i> New User</button>
-            <button type="button" class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete User</button>
-            <button type="button" class="btn btn-outline-info"><i class="far fa-edit"></i> Edit User</button>
-          </div>
+        <div class='card-footer'>
+          <div class='btn-group'>
+            <a href='<?php echo url_for('users/new.php'); ?>' class="btn btn-outline-info"><i class="far fa-plus-square"></i> New User</a>
+            <a href='<?php echo url_for('users/delete.php'); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete User</a>
+            <a href='<?php echo url_for('users/edit.php'); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit User</a>
+          </div><!-- .btn-group -->
         </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-12 -->
