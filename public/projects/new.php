@@ -20,7 +20,7 @@
 
         <?php include('form_fields.php'); ?>
 
-        <button class="btn btn-outline-info" type="submit">Create New Project</button>
+        <button class="btn btn-outline-info" type="submit"><i class="far fa-plus-square"></i> Add New Project</button>
 
       </fieldset><!-- fieldset -->
     </form>

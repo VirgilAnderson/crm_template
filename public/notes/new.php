@@ -19,7 +19,7 @@
 
         <?php include('form_fields.php'); ?>
 
-        <button class="btn btn-outline-info" type="submit">Create New Note</button>
+        <button class="btn btn-outline-info" type="submit"><i class="far fa-plus-square"></i> Add New Note</button>
 
       </fieldset><!-- fieldset -->
     </form>
