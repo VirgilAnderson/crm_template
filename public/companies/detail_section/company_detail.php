@@ -1,5 +1,8 @@
 <ul class="list-group list-group-flush">
   <dl class="list-group-item">
+    <h3>Company Name</h3>
+  </dl>
+  <dl class="list-group-item">
     <dt>Address</dt>
     <dd>company_address</dd>
   </dl>

@@ -1,7 +1,6 @@
 <ul class="list-group list-group-flush">
   <dl class="list-group-item">
-    <dt>Title</dt>
-    <dd>task_name</dd>
+    <h3>Task Title</h3>
   </dl>
   <dl class="list-group-item">
     <dt>Type</dt>
