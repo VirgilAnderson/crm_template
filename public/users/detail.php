@@ -18,7 +18,7 @@
     <!-- Lead Card -->
     <div class="container col-12 mb-4">
       <div class="card">
-        <div class="card-header">
+        <div class="card-header text-secondary">
           <h2><i class="fas fa-info-circle"></i> User Details</h2>
         </div><!-- .card-header -->
         <div class="card-body">

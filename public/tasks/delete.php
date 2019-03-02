@@ -17,7 +17,7 @@
   <div class="row">
     <div class="container col-12 mb-4">
       <div class="card">
-        <div class="card-header">
+        <div class="card-header text-secondary">
           <h2><i class="far fa-trash-alt"></i> Delete Task</h2>
         </div><!-- .card-header -->
         <div class="card-body">
@@ -28,7 +28,7 @@
               <button class="btn btn-outline-info" type="submit"><i class="far fa-trash-alt"></i> Delete</button>
             </fieldset><!-- fieldset -->
           </form>
-        </div><!-- .card-body --> 
+        </div><!-- .card-body -->
         <div class="card-footer">
           <div class='btn-group'>
             <a href='<?php echo url_for('tasks/detail.php'); ?>' class="btn btn-outline-info"><i class="fas fa-info-circle"></i> Task Detail</a>

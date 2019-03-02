@@ -20,7 +20,7 @@
       <div class="card">
 
         <!-- Card Header -->
-        <div class="card-header">
+        <div class="card-header text-secondary">
           <h2><i class="fas fa-info-circle"></i> Contact Details</h2>
         </div><!-- .card-header -->
         <div class="card-body">

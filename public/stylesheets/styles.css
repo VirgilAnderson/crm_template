@@ -1,1 +1,12 @@
-
+body {
+  background-color: #f5f5f0;
+}
+.card-header {
+  background-color: #e6e6ff;
+}
+.card-body {
+  background-color: ;
+}
+.card-footer {
+  background-color: #e6e6ff;
+}

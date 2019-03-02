@@ -14,32 +14,31 @@
 <div class='container'>
     <div class="container col-12 mb-4">
       <div class="card">
-        <div class="card-header">
+        <div class="card-header text-secondary">
           <h2><i class="fas fa-user-circle"></i> Account</h2>
         </div><!-- .card-header -->
         <div class="card-body">
-          <div class="card-body">
-            <ul class="list-group">
-            <dl class="list-group-item d-flex">
-              <dt class="mr-4">First Name</dt>
-              <dd>First_name</dd>
-            </dl>
-            <dl class="list-group-item d-flex">
-              <dt class="mr-4">Last Name</dt>
-              <dd>Last_name</dd>
-            </dl>
-            <dl class="list-group-item d-flex">
-              <dt class="mr-4">Role</dt>
-              <dd>Role</dd>
-            </dl>
-            <dl class="list-group-item d-flex">
-              <dt class="mr-4">Email</dt>
-              <dd>Email_address</dd>
-            </dl>
-            <dl class="list-group-item d-flex">
-              <dt class="mr-4">Username</dt>
-              <dd>Username</dd>
-            </dl>
+          <ul class="list-group">
+          <dl class="list-group-item d-flex">
+            <dt class="mr-4">First Name</dt>
+            <dd>First_name</dd>
+          </dl>
+          <dl class="list-group-item d-flex">
+            <dt class="mr-4">Last Name</dt>
+            <dd>Last_name</dd>
+          </dl>
+          <dl class="list-group-item d-flex">
+            <dt class="mr-4">Role</dt>
+            <dd>Role</dd>
+          </dl>
+          <dl class="list-group-item d-flex">
+            <dt class="mr-4">Email</dt>
+            <dd>Email_address</dd>
+          </dl>
+          <dl class="list-group-item d-flex">
+            <dt class="mr-4">Username</dt>
+            <dd>Username</dd>
+          </dl>
         </div><!-- .card-body -->
         <div class="card-footer">
           <div class='btn-group'>

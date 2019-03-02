@@ -14,7 +14,7 @@
 <div class='container'>
     <div class="container col-12 mb-4">
       <div class="card">
-        <div class="card-header">
+        <div class="card-header text-secondary">
           <div class='row'>
             <div class='col-sm'>
               <h2><i class="fas fa-project-diagram"></i> Projects</h2>
