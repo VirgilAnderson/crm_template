@@ -30,11 +30,10 @@
           </form>
         </div><!-- .card-body -->
         <div class="card-footer">
-          <dl class="list-group-item d-flex">
-            <dt>
-              <a class="card-link" href=""><i class="far fa-edit"></i> Edit Account</a>
-            </dt>
-          </dl>
+          <div class='btn-group'>
+            <a href='<?php echo url_for('account/index.php'); ?>' class="btn btn-outline-info"><i class="fas fa-user-circle"></i> Account</a>
+            <a href='<?php echo url_for('account/edit.php'); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Account</a>
+          </div><!-- .btn-group -->
         </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-12 -->
