@@ -1,3 +1,4 @@
+<!-- contact detail -->
 <ul class="list-group list-group-flush">
   <dl class="list-group-item">
     <h3>Contact Name</h3>
@@ -38,4 +39,4 @@
     <dt>Lead Owner</dt>
     <dd>Lead Owner</dd>
   </dl>
-</ul>
+</ul> <!-- end contact detail -->

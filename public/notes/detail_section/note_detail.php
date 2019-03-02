@@ -1,3 +1,4 @@
+<!-- note_detail -->
 <ul class="list-group list-group-flush">
   <dl class="list-group-item">
     <h3>Note Name</h3>
@@ -10,4 +11,4 @@
     <dt>Note Description</dt>
     <dd>Note Description</dd>
   </dl>
-</ul>
+</ul><!-- end note_detail -->

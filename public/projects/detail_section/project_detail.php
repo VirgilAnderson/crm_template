@@ -1,3 +1,4 @@
+<!-- project detail -->
 <ul class="list-group list-group-flush">
   <dl class="list-group-item">
     <h3>Project Title</h3>
@@ -18,4 +19,4 @@
     <dt>Project Owner</dt>
     <dd>username</dd>
   </dl>
-</ul>
+</ul> <!-- end project detail -->

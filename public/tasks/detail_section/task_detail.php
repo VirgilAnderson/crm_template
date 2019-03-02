@@ -1,3 +1,4 @@
+<!-- task detail -->
 <ul class="list-group list-group-flush">
   <dl class="list-group-item">
     <h3>Task Title</h3>
@@ -18,4 +19,4 @@
     <dt>Due Date</dt>
     <dd>due_date</dd>
   </dl>
-</ul>
+</ul> <!-- end task detail -->

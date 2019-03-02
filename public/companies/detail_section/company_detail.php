@@ -1,3 +1,4 @@
+<!-- Company Detail -->
 <ul class="list-group list-group-flush">
   <dl class="list-group-item">
     <h3>Company Name</h3>
@@ -34,4 +35,4 @@
     <dt>Company Owner</dt>
     <dd>username</dd>
   </dl>
-</ul>
+</ul> <!-- end company detail -->
