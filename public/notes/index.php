@@ -6,7 +6,6 @@
 <div class="container" style="margin-top:20px">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="<?php echo url_for('index.php'); ?>"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-    <li class="breadcrumb-item"><a href="<?php echo url_for('Notes/index.php'); ?>"><i class="fas fa-dollar-sign"></i> Notes</a></li>
     <li class="breadcrumb-item active"><i class="fas fa-info-circle"></i> Note Details</li>
   </ol>
 </div><!-- .container mt-4 -->
@@ -36,7 +35,7 @@
                 <div class="card-header">
 
                   <!-- Group Pane Tabs -->
-                  <?php $selected = 'Note'; ?>
+                  <?php $selected = 'note'; ?>
                   <?php include('../../private/shared/detail_panes/group_tabs.php'); ?>
                 </div><!-- .card-header -->
 
@@ -52,9 +51,15 @@
         </div><!-- .card-body -->
         <div class="card-footer">
           <div class="btn-group">
-            <button type="button" class="btn btn-outline-info"><i class="far fa-plus-square"></i> New Note</button>
-            <button type="button" class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Note</button>
-            <button type="button" class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Note</button>
+            <form action='<?php echo url_for('notes/new.php'); ?>'>
+              <button type="submit" class="btn btn-outline-info"><i class="far fa-plus-square"></i> New Note</button>
+            </form>
+            <form action='<?php echo url_for('notes/delete.php'); ?>'>
+              <button type="submit" class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Note</button>
+            </form>
+            <form action='<?php echo url_for('notes/edit.php'); ?>'>
+              <button type="submit" class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Note</button>
+            </form>
           </div>
         </div><!-- .card-footer -->
       </div><!-- .card -->
