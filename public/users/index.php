@@ -22,7 +22,7 @@
             <div class='col-sm'>
               <!-- Search Form -->
               <form class="form-inline my-2 my-sm-0 d-flex justify-content-end">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search Users...">
                 <button class="btn btn-outline-dark my-2 my-sm-0" type="button"><i class="fas fa-search"></i></button>
               </form>
             </div><!-- .col-sm -->
