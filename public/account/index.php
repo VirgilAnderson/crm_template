@@ -42,10 +42,10 @@
             </dl>
         </div><!-- .card-body -->
         <div class="card-footer">
-          <div class="btn-group">
-            <button type="button" class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Account</button>
-            <button type="button" class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Account</button>
-          </div>
+          <div class='btn-group'>
+            <a href='<?php echo url_for('account/delete.php'); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Account</a>
+            <a href='<?php echo url_for('account/edit.php'); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Account</a>
+          </div><!-- .btn-group -->
         </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-12 -->
