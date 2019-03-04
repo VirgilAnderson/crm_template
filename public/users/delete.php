@@ -2,10 +2,13 @@
 <?php
   // Get the user id else redirect to index.php
   $user_id = $_GET['user_id'] ?? false;
-  if(!$user_id) {
+  if($user_id) {
+    // Search for user by id
+    $user = User::find_by_id($user_id);
+  } else {
+    // If not set, redirect to users page
     redirect_to(url_for('users/index.php'));
   }
-
 ?>
 
 <?php $page_title = "Delete User"; ?>
@@ -16,8 +19,8 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="<?php echo url_for('index.php'); ?>"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
     <li class="breadcrumb-item"><a href='<?php echo url_for('users/index.php'); ?>'><i class="fas fa-users"></i> Users</a></li>
-    <li class="breadcrumb-item"><a href="<?php echo url_for('users/detail.php?user_id=' . $user_id); ?>"><i class="fas fa-info-circle"></i> User Details</a></li>
-    <li class="breadcrumb-item"><i class="far fa-trash-alt"></i> Delete User</li>
+    <li class="breadcrumb-item"><a href="<?php echo url_for('users/detail.php?user_id=' . $user_id); ?>"><i class="fas fa-info-circle"></i> <?php echo $user->full_name(); ?> Details</a></li>
+    <li class="breadcrumb-item"><i class="far fa-trash-alt"></i> Delete <?php echo $user->full_name(); ?></li>
   </ol>
 </div><!-- .container mt-4 -->
 
@@ -27,13 +30,13 @@
     <div class="container col-12 mb-4">
       <div class="card">
         <div class="card-header text-secondary">
-          <h2><i class="far fa-trash-alt"></i> Delete User</h2>
+          <h2><i class="far fa-trash-alt"></i> Delete <?php echo $user->full_name(); ?></h2>
         </div><!-- .card-header -->
         <div class="card-body">
-          <p>Are you sure you want to delete?</p>
-          <p>User Name</p>
           <form class="col-sm-6" action="" method="post">
-            <fieldset class="form-group">
+            <legend>Are you sure you want to delete</legend>
+            <legend><?php echo $user->full_name(); ?>?</legend>
+            <fieldset class="form-group mt-3">
               <button class="btn btn-outline-info" type="submit"><i class="far fa-trash-alt"></i> Delete</button>
             </fieldset><!-- fieldset -->
           </form>

@@ -12,7 +12,7 @@
 
 ?>
 
-<?php $page_title = "User Details"; ?>
+<?php $page_title = $user->full_name() . " Details"; ?>
 <?php include('../../private/shared/header.php'); ?>
 
 <!-- breadcrumbs -->
@@ -20,7 +20,7 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="<?php echo url_for('index.php'); ?>"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
     <li class="breadcrumb-item"><a href='<?php echo url_for('users/index.php'); ?>'><i class="fas fa-users"></i> Users</a></li>
-    <li class="breadcrumb-item active"><i class="fas fa-info-circle"></i> User Details</li>
+    <li class="breadcrumb-item active"><i class="fas fa-info-circle"></i> <?php echo $user->full_name(); ?> Details</li>
   </ol>
 </div><!-- .container mt-4 -->
 

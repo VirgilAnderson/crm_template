@@ -30,7 +30,7 @@
 
 ?>
 
-<?php $page_title = "Edit User"; ?>
+<?php $page_title = "Edit " . $user->full_name(); ?>
 <?php include('../../private/shared/header.php'); ?>
 
 <!-- breadcrumbs -->
@@ -38,8 +38,8 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="<?php echo url_for('index.php'); ?>"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
     <li class="breadcrumb-item"><a href='<?php echo url_for('users/index.php'); ?>'><i class="fas fa-users"></i> Users</a></li>
-    <li class="breadcrumb-item"><a href="<?php echo url_for('users/detail.php?user_id=' . $user_id); ?>"><i class="fas fa-info-circle"></i> User Details</a></li>
-    <li class="breadcrumb-item"><i class="far fa-edit"></i> Edit User</li>
+    <li class="breadcrumb-item"><a href="<?php echo url_for('users/detail.php?user_id=' . $user_id); ?>"><i class="fas fa-info-circle"></i> <?php echo $user->full_name(); ?> Details</a></li>
+    <li class="breadcrumb-item"><i class="far fa-edit"></i> Edit <?php echo $user->full_name(); ?></li>
   </ol>
 
   <form class="col-sm-6" action="<?php echo url_for('/users/edit.php?user_id=' . $user_id); ?>" method="post">
