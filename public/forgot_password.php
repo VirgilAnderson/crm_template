@@ -1,5 +1,5 @@
 <?php require_once('../private/initialize.php'); ?>
-<?php $page_title = "Login"; ?>
+<?php $page_title = "Forgot Password"; ?>
 <?php include('../private/shared/header.php'); ?>
 
 <!-- breadcrumbs -->
@@ -12,21 +12,16 @@
 <!-- main container -->
 <div class='container d-flex flex-column justify-content-center' style="margin-bottom:5%; margin-top: 2%;">
   <form class="col-sm-6 mr-auto ml-auto" action=""  method="post">
-      <h2 class='text-center'><i class="fas fa-sign-in-alt"></i> Login</h2>
+      <h2 class='text-center'><i class="fas fa-unlock"></i> Reset Password</h2>
       <fieldset class="form-group">
-        <legend class='text-center'>Fill in the form to log in</legend>
+        <legend class='text-center'>Enter your email address and we will send you a link to reset your password.</legend>
 
         <div class="form-group">
-          <label class="form-control-label" for="">Username</label>
-          <input class="form-control" type="text" name="">
+          <label class="form-control-label" for="">Email Address</label>
+          <input class="form-control" type="text" name="" placeholder="Enter Your Email Address">
         </div><!-- form-group -->
 
-        <div class="form-group">
-          <label class="form-control-label" for="">Password</label>
-          <input class="form-control" type="password" name="">
-        </div><!-- form-group -->
-
-        <button class="btn btn-outline-info" type="submit"><i class="fas fa-sign-in-alt"></i> Login</button>
+        <button class="btn btn-outline-info" type="submit"><i class="fas fa-unlock"></i> Reset Password</button>
 
       </fieldset><!-- fieldset -->
     </form>
