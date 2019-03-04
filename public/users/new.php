@@ -20,6 +20,7 @@
 
   } else {
     // Display blank Form
+    $user = new User;
   }
 
 
