@@ -9,6 +9,15 @@
     // If not set, redirect to users page
     redirect_to(url_for('users/index.php'));
   }
+
+  // If post request, process the form
+  if(is_post_request()) {
+    // Delete
+    $result = $user->delete();
+    //$session->message('The account was successfully deleted.');
+    //$session->logout();
+    redirect_to(url_for('/users/index.php'));
+  }
 ?>
 
 <?php $page_title = "Delete User"; ?>
