@@ -5,17 +5,17 @@
 
 <div class="form-group">
   <label class="form-control-label" for="user[user_last_name]">Last Name</label>
-  <input class="form-control" type="text" name="user[user_last_name]" >
+  <input class="form-control" type="text" name="user[user_last_name]" value="<?php echo h($user->user_last_name); ?>">
 </div><!-- form-group -->
 
 <div class="form-group">
   <label class="form-control-label" for="user[user_email]">Email</label>
-  <input class="form-control" type="text" name="user[user_email]" >
+  <input class="form-control" type="text" name="user[user_email]" value="<?php echo h($user->user_email); ?>">
 </div><!-- form-group -->
 
 <div class="form-group">
   <label class="form-control-label" for="user[user_username]">Username</label>
-  <input class="form-control" type="text" name="user[user_username]">
+  <input class="form-control" type="text" name="user[user_username]" value="<?php echo h($user->user_username); ?>">
 </div><!-- form-group -->
 
 <div class="form-group">
