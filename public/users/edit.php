@@ -1,4 +1,16 @@
 <?php require_once('../../private/initialize.php'); ?>
+<?php
+  // Get user_id if set
+  $user_id = $_GET['user_id'] ?? false;
+
+  // If user_id is set, then query the db
+  if($user_id) {
+    // Search for user by id
+    $user = User::find_by_id($user_id);
+  }
+
+?>
+
 <?php $page_title = "Edit User"; ?>
 <?php include('../../private/shared/header.php'); ?>
 

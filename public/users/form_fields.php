@@ -1,6 +1,6 @@
 <div class="form-group">
   <label class="form-control-label" for="user[user_first_name]">First Name</label>
-  <input class="form-control" type="text" name="user[user_first_name]" >
+  <input class="form-control" type="text" name="user[user_first_name]" value="<?php echo h($user->user_first_name); ?>">
 </div><!-- form-group -->
 
 <div class="form-group">
