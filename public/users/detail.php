@@ -1,4 +1,17 @@
 <?php require_once('../../private/initialize.php'); ?>
+
+<?php
+  // get user id, if not set redirect back to user listings page
+  $user_id = $_GET['user_id'] ?? false;
+  if(!$user_id) {
+    redirect_to('index.php');
+  }
+
+  // Search for user by id
+  $user = User::find_by_id($user_id);
+
+?>
+
 <?php $page_title = "User Details"; ?>
 <?php include('../../private/shared/header.php'); ?>
 
@@ -25,23 +38,23 @@
           <ul class="list-group">
           <dl class="list-group-item d-flex">
             <dt class="mr-4">First Name</dt>
-            <dd>First_name</dd>
+            <dd><?php echo $user->user_first_name; ?></dd>
           </dl>
           <dl class="list-group-item d-flex">
             <dt class="mr-4">Last Name</dt>
-            <dd>Last_name</dd>
+            <dd><?php echo $user->user_last_name; ?></dd>
           </dl>
           <dl class="list-group-item d-flex">
             <dt class="mr-4">Role</dt>
-            <dd>Role</dd>
+            <dd><?php echo $user->user_role; ?></dd>
           </dl>
           <dl class="list-group-item d-flex">
             <dt class="mr-4">Email</dt>
-            <dd>Email_address</dd>
+            <dd><?php echo $user->user_email; ?></dd>
           </dl>
           <dl class="list-group-item d-flex">
             <dt class="mr-4">Username</dt>
-            <dd>Username</dd>
+            <dd><?php echo $user->user_username; ?></dd>
           </dl>
         </div><!-- .card-body -->
         <div class='card-footer'>

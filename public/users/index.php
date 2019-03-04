@@ -2,7 +2,7 @@
 
 <?php
   $sql = "SELECT * FROM user ";
-  $sql .= "ORDER BY user_id DESC";
+  $sql .= "ORDER BY id DESC";
   $user = User::find_by_sql($sql);
 
 ?>
@@ -45,11 +45,13 @@
                   <th>Last Name</th>
                   <th>Email</th>
                   <th>Username</th>
+
                 </tr>
               </thead>
               <tbody>
                 <?php foreach ($user as $user) { ?>
-                <tr class='clickable-row' data-href="<?php echo url_for('/users/detail.php?user_id=' . $user->user_id); ?>">
+                <tr class='clickable-row' data-href="<?php echo url_for('/users/detail.php?user_id=' . $user->id); ?>">
+
                   <td><?php echo h($user->user_first_name); ?></td>
                   <td><?php echo h($user->user_last_name); ?></td>
                   <td><?php echo h($user->user_email); ?></td>
