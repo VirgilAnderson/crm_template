@@ -76,4 +76,15 @@
     </div><!-- .container col-sm-12 -->
   </div><!-- . row -->
 </div><!-- .container -->
+
+
+<?php
+
+  $sql = "SELECT * FROM user";
+  $result = $database->query($sql);
+  $row = $result->fetch_assoc();
+  $result->free();
+
+  echo "User First Name: " . $row['user_first_name'];
+?>
 <?php include('../../private/shared/footer.php'); ?>
