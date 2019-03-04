@@ -28,6 +28,10 @@
 
         <button class="btn btn-outline-info" type="submit"><i class="fas fa-unlock"></i> Reset Password</button>
 
+        <div class='form-group mt-3 text-right'>
+          <a href='password_reset.php' ><i class="far fa-share-square"></i> Resend Link</a>
+        </div>
+
       </fieldset><!-- fieldset -->
     </form>
     <ul class='nav mr-auto ml-auto'>

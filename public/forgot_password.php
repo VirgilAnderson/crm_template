@@ -23,8 +23,8 @@
 
         <button class="btn btn-outline-info" type="submit"><i class="fas fa-unlock"></i> Reset Password</button>
 
-        <div class='form-group mt-3'>
-          <a href='login.php' >Login</a>
+        <div class='form-group mt-3 text-right'>
+          <a href='login.php' ><i class="fas fa-sign-in-alt"></i> Login</a>
         </div>
       </fieldset><!-- fieldset -->
     </form>

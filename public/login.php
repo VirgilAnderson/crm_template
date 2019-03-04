@@ -27,8 +27,8 @@
         </div><!-- form-group -->
 
         <button class="btn btn-outline-info" type="submit"><i class="fas fa-sign-in-alt"></i> Login</button>
-        <div class='form-group mt-3'>
-          <a href='forgot_password.php' >Forgot Password?</a>
+        <div class='form-group mt-3 text-right'>
+          <a href='forgot_password.php' ><i class="fas fa-unlock"></i> Forgot Password?</a>
         </div>
       </fieldset><!-- fieldset -->
     </form>
