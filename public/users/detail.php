@@ -32,7 +32,7 @@
     <div class="container col-12 mb-4">
       <div class="card">
         <div class="card-header text-secondary">
-          <h2><i class="fas fa-info-circle"></i> User Details</h2>
+          <h2><i class="fas fa-info-circle"></i> <?php echo $user->full_name(); ?> Details</h2>
         </div><!-- .card-header -->
         <div class="card-body">
           <ul class="list-group">
@@ -60,8 +60,8 @@
         <div class='card-footer'>
           <div class='btn-group'>
             <a href='<?php echo url_for('users/new.php'); ?>' class="btn btn-outline-info"><i class="far fa-plus-square"></i> New User</a>
-            <a href='<?php echo url_for('users/delete.php?user_id=' . $user->id); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete User</a>
-            <a href='<?php echo url_for('users/edit.php?user_id=' . $user->id); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit User</a>
+            <a href='<?php echo url_for('users/delete.php?user_id=' . $user->id); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete <?php echo $user->full_name(); ?></a>
+            <a href='<?php echo url_for('users/edit.php?user_id=' . $user->id); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit <?php echo $user->full_name(); ?></a>
           </div><!-- .btn-group -->
         </div><!-- .card-footer -->
       </div><!-- .card -->

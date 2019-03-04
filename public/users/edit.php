@@ -43,12 +43,12 @@
   </ol>
 
   <form class="col-sm-6" action="<?php echo url_for('/users/edit.php?user_id=' . $user_id); ?>" method="post">
-      <h2><i class="far fa-edit"></i> Edit User</h2>
+      <h2><i class="far fa-edit"></i> Edit <?php echo $user->full_name(); ?></h2>
       <fieldset class="form-group">
-        <legend>Lead Information</legend>
+        <legend>User Information</legend>
 
         <?php include('form_fields.php'); ?>
-        <button class="btn btn-outline-info" type="submit"><i class="far fa-edit"></i> Edit User</button>
+        <button class="btn btn-outline-info" type="submit"><i class="far fa-edit"></i> Edit <?php echo $user->full_name(); ?></button>
 
       </fieldset><!-- fieldset -->
     </form>

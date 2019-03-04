@@ -52,8 +52,8 @@
         </div><!-- .card-body -->
         <div class="card-footer">
           <div class='btn-group'>
-            <a href='<?php echo url_for('users/detail.php'); ?>' class="btn btn-outline-info"><i class="fas fa-info-circle"></i> User Detail</a>
-            <a href='<?php echo url_for('users/edit.php'); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit User</a>
+            <a href='<?php echo url_for('users/detail.php?user_id=' . $user_id); ?>' class="btn btn-outline-info"><i class="fas fa-info-circle"></i> <?php echo $user->full_name(); ?> Detail</a>
+            <a href='<?php echo url_for('users/edit.php?user_id=' . $user_id); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit <?php echo $user->full_name(); ?></a>
           </div><!-- .btn-group -->
         </div><!-- .card-footer -->
       </div><!-- .card -->
