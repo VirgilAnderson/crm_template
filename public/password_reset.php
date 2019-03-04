@@ -1,9 +1,9 @@
 <?php require_once('../private/initialize.php'); ?>
-<?php $page_title = "Login"; ?>
+<?php $page_title = "Forgot Password"; ?>
 <?php include('../private/shared/header.php'); ?>
 
 <!-- breadcrumbs -->
-<div class="container text-center d-flex justify-content-center" style="margin-top:5%">
+<div class="container text-center d-flex justify-content-center" style="margin-top:2.5%">
   <div class='col-sm-6 display-1'>
     <i class="fas fa-skull-crossbones"></i>
   </div><!-- .col-sm-6 -->
@@ -12,21 +12,21 @@
 <!-- main container -->
 <div class='container d-flex flex-column justify-content-center' style="margin-bottom:5%; margin-top: 2%;">
   <form class="col-sm-6 mr-auto ml-auto" action=""  method="post">
-      <h2 class='text-center'><i class="fas fa-sign-in-alt"></i> Login</h2>
+      <h2 class='text-center'><i class="fas fa-unlock"></i> Reset Password</h2>
       <fieldset class="form-group">
-        <legend class='text-center'>Fill in the form to log in</legend>
+        <legend class='text-center'>Enter a new password in the fields below.</legend>
 
         <div class="form-group">
-          <label class="form-control-label" for="">Username</label>
-          <input class="form-control" type="text" name="">
+          <label class="form-control-label" for="password">New Password</label>
+          <input class="form-control" type="password" name="password" placeholder="New Password">
         </div><!-- form-group -->
 
         <div class="form-group">
-          <label class="form-control-label" for="">Password</label>
-          <input class="form-control" type="password" name="">
+          <label class="form-control-label" for="confirm_password">Confirm Password</label>
+          <input class="form-control" type="password" name="confirm_password" placeholder="Confirm Password">
         </div><!-- form-group -->
 
-        <button class="btn btn-outline-info" type="submit"><i class="fas fa-sign-in-alt"></i> Login</button>
+        <button class="btn btn-outline-info" type="submit"><i class="fas fa-unlock"></i> Reset Password</button>
 
       </fieldset><!-- fieldset -->
     </form>
