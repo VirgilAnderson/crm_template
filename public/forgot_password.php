@@ -28,19 +28,6 @@
         </div>
       </fieldset><!-- fieldset -->
     </form>
-    <ul class='nav mr-auto ml-auto'>
-      <li class='nav-item'>
-        <a href='' class='nav-link'>Privacy Policy</a>
-      </li><!-- .nav-item -->
-      <li class='nav-item'>
-        <a href='' class='nav-link'>Terms Of Use</a>
-      </li><!-- .nav-item -->
-      <li class='nav-item'>
-        <a href='' class='nav-link'>Security</a>
-      </li><!-- .nav-item -->
-      <li class='nav-item'>
-        <a href='' class='nav-link disabled'>Contact CRM Template</a>
-      </li><!-- .nav-item -->
-    </ul><!-- nav -->
+    
 </div><!-- .container -->
 <?php include('../private/shared/footer.php'); ?>
