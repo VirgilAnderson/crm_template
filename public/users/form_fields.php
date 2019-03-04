@@ -20,13 +20,12 @@
 
 <div class="form-group">
   <label for="user[user_role]">User Role</label>
-      <select class="form-control" name="user[user_role]">
-        <option value='Sales'>Sales</option>
-        <option value='Developer'>Developer</option>
-        <option value='Marketing'>Marketing</option>
-        <option value='Customer Service'>Customer Service</option>
-        <option value='Admin'>Admin</option>
+    <select class="form-control" name="user[user_role]">
+      <?php foreach(USER::USER_ROLE as $role) { ?>
+        <option value='<?php echo $role; ?>' <?php if($role == $user->user_role) {echo 'selected'; } ?>><?php echo $role; ?></option>
+      <?php } ?>
     </select>
+
 </div><!-- form-group -->
 
 <div class="form-group">
