@@ -3,7 +3,7 @@
 <?php include('../private/shared/header.php'); ?>
 
 <!-- breadcrumbs -->
-<div class="container text-center d-flex justify-content-center" style="margin-top:5%">
+<div class="container text-center d-flex justify-content-center" style="margin-top:2.5%">
   <div class='col-sm-6 display-1'>
     <i class="fas fa-skull-crossbones"></i>
   </div><!-- .col-sm-6 -->
@@ -23,6 +23,9 @@
 
         <button class="btn btn-outline-info" type="submit"><i class="fas fa-unlock"></i> Reset Password</button>
 
+        <div class='form-group mt-3'>
+          <a href='login.php' >Login</a>
+        </div>
       </fieldset><!-- fieldset -->
     </form>
     <ul class='nav mr-auto ml-auto'>

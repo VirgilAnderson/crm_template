@@ -3,7 +3,7 @@
 <?php include('../private/shared/header.php'); ?>
 
 <!-- breadcrumbs -->
-<div class="container text-center d-flex justify-content-center" style="margin-top:5%">
+<div class="container text-center d-flex justify-content-center" style="margin-top:2.5%">
   <div class='col-sm-6 display-1'>
     <i class="fas fa-skull-crossbones"></i>
   </div><!-- .col-sm-6 -->
@@ -18,18 +18,21 @@
 
         <div class="form-group">
           <label class="form-control-label" for="">Username</label>
-          <input class="form-control" type="text" name="">
+          <input class="form-control" type="text" name="" placeholder="username">
         </div><!-- form-group -->
 
         <div class="form-group">
           <label class="form-control-label" for="">Password</label>
-          <input class="form-control" type="password" name="">
+          <input class="form-control" type="password" name="" placeholder="password">
         </div><!-- form-group -->
 
         <button class="btn btn-outline-info" type="submit"><i class="fas fa-sign-in-alt"></i> Login</button>
-
+        <div class='form-group mt-3'>
+          <a href='forgot_password.php' >Forgot Password?</a>
+        </div>
       </fieldset><!-- fieldset -->
     </form>
+
     <ul class='nav mr-auto ml-auto'>
       <li class='nav-item'>
         <a href='' class='nav-link'>Privacy Policy</a>
