@@ -1,4 +1,12 @@
 <?php require_once('../../private/initialize.php'); ?>
+
+<?php
+  $sql = "SELECT * FROM user ";
+  $sql .= "ORDER BY user_id DESC";
+  $user = User::find_by_sql($sql);
+
+?>
+
 <?php $page_title = "Users"; ?>
 <?php include('../../private/shared/header.php'); ?>
 
@@ -40,13 +48,15 @@
                 </tr>
               </thead>
               <tbody>
-                <tr class='clickable-row' data-href="">
-                  <td>first_name</td>
-                  <td>last_name</td>
-                  <td>email</td>
-                  <td>username</td>
+                <?php foreach ($user as $user) { ?>
+                <tr class='clickable-row' data-href="<?php echo url_for('/users/detail.php?user_id=' . $user->user_id); ?>">
+                  <td><?php echo h($user->user_first_name); ?></td>
+                  <td><?php echo h($user->user_last_name); ?></td>
+                  <td><?php echo h($user->user_email); ?></td>
+                  <td><?php echo h($user->user_username); ?></td>
                 </tr>
             </tbody>
+                <?php } ?>
             </table>
           </div><!-- .table-responsive -->
 
@@ -77,14 +87,4 @@
   </div><!-- . row -->
 </div><!-- .container -->
 
-
-<?php
-
-  $sql = "SELECT * FROM user";
-  $result = $database->query($sql);
-  $row = $result->fetch_assoc();
-  $result->free();
-
-  echo "User First Name: " . $row['user_first_name'];
-?>
 <?php include('../../private/shared/footer.php'); ?>
