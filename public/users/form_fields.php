@@ -21,11 +21,11 @@
 <div class="form-group">
   <label for="user[user_role]">User Role</label>
       <select class="form-control" name="user[user_role]">
-        <option>Sales</option>
-        <option>Developer</option>
-        <option>Marketing</option>
-        <option>Customer Service</option>
-        <option>Admin</option>
+        <option value='Sales'>Sales</option>
+        <option value='Developer'>Developer</option>
+        <option value='Marketing'>Marketing</option>
+        <option value='Customer Service'>Customer Service</option>
+        <option value='Admin'>Admin</option>
     </select>
 </div><!-- form-group -->
 
