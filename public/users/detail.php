@@ -60,7 +60,7 @@
         <div class='card-footer'>
           <div class='btn-group'>
             <a href='<?php echo url_for('users/new.php'); ?>' class="btn btn-outline-info"><i class="far fa-plus-square"></i> New User</a>
-            <a href='<?php echo url_for('users/delete.php'); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete User</a>
+            <a href='<?php echo url_for('users/delete.php?user_id=' . $user->id); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete User</a>
             <a href='<?php echo url_for('users/edit.php?user_id=' . $user->id); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit User</a>
           </div><!-- .btn-group -->
         </div><!-- .card-footer -->

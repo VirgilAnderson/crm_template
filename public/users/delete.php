@@ -1,4 +1,13 @@
 <?php require_once('../../private/initialize.php'); ?>
+<?php
+  // Get the user id else redirect to index.php
+  $user_id = $_GET['user_id'] ?? false;
+  if(!$user_id) {
+    redirect_to(url_for('users/index.php'));
+  }
+
+?>
+
 <?php $page_title = "Delete User"; ?>
 <?php include('../../private/shared/header.php'); ?>
 
@@ -7,7 +16,7 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="<?php echo url_for('index.php'); ?>"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
     <li class="breadcrumb-item"><a href='<?php echo url_for('users/index.php'); ?>'><i class="fas fa-users"></i> Users</a></li>
-    <li class="breadcrumb-item"><a href=""><i class="fas fa-info-circle"></i> User Details</a></li>
+    <li class="breadcrumb-item"><a href="<?php echo url_for('users/detail.php?user_id=' . $user_id); ?>"><i class="fas fa-info-circle"></i> User Details</a></li>
     <li class="breadcrumb-item"><i class="far fa-trash-alt"></i> Delete User</li>
   </ol>
 </div><!-- .container mt-4 -->
