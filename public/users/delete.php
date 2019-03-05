@@ -1,5 +1,8 @@
 <?php require_once('../../private/initialize.php'); ?>
 <?php
+  // Ensure User Logged In
+  require_login();
+
   // Get the user id else redirect to index.php
   $user_id = $_GET['user_id'] ?? false;
   if($user_id) {

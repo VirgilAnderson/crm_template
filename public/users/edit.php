@@ -1,5 +1,8 @@
 <?php require_once('../../private/initialize.php'); ?>
 <?php
+  // Ensure User Logged In
+  require_login();
+
   // Get user_id if set
   $user_id = $_GET['user_id'] ?? false;
 

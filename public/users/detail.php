@@ -1,6 +1,9 @@
 <?php require_once('../../private/initialize.php'); ?>
 
 <?php
+  // Ensure User Logged In
+  require_login();
+  
   // get user id, if not set redirect back to user listings page
   $user_id = $_GET['user_id'] ?? false;
   if(!$user_id) {

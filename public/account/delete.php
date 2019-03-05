@@ -1,4 +1,9 @@
 <?php require_once('../../private/initialize.php'); ?>
+<?php
+  // Ensure User Logged In
+  require_login();
+?>
+
 <?php $page_title = "Delete Account"; ?>
 <?php include('../../private/shared/header.php'); ?>
 

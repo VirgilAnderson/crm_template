@@ -1,4 +1,9 @@
 <?php require_once('../../private/initialize.php'); ?>
+<?php 
+  // Ensure User Logged In
+  require_login();
+?>
+
 <?php $page_title = "Edit Account"; ?>
 <?php include('../../private/shared/header.php'); ?>
 

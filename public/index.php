@@ -1,6 +1,11 @@
 <?php require_once('../private/initialize.php'); ?>
 <?php include('../private/shared/header.php'); ?>
 
+<?php
+  // Ensure User Logged In
+  require_login();
+?>
+
 <!-- breadcrumbs -->
 <div class="container" style="margin-top:20px">
   <ol class="breadcrumb">

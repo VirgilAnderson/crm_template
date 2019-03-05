@@ -1,6 +1,9 @@
 <?php require_once('../../private/initialize.php'); ?>
 
 <?php
+  // Ensure User Logged In
+  require_login();
+
   // If Post Request Process form
   if(is_post_request()) {
     // Get input data
@@ -42,6 +45,9 @@
 <div class='container'>
   <form class="col-sm-6" action="<?php echo url_for('users/new.php'); ?>"  method="post">
       <h2><i class="far fa-plus-square"></i> New User</h2>
+      <div class='text-danger errors'>
+        <?php echo display_errors($user->errors); ?>
+      </div>
       <fieldset class="form-group">
         <legend>Fill in the form to create a new user</legend>
 

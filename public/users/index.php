@@ -1,6 +1,10 @@
 <?php require_once('../../private/initialize.php'); ?>
 
 <?php
+  // Ensure User Logged In
+  require_login();
+
+
   $sql = "SELECT * FROM user ";
   $sql .= "ORDER BY id DESC";
   $user = User::find_by_sql($sql);
