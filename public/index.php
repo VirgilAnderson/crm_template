@@ -31,7 +31,7 @@
         </div><!-- .card-header -->
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table table-hover table-sm">
+            <table class="table table-bordered table-hover table-sm">
               <thead class='thead-light'>
                 <tr class='clickable-row' data-href="">
                   <th></th>
@@ -86,7 +86,7 @@
 
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table table-hover table-sm">
+            <table class="table table-bordered table-hover table-sm">
               <thead class='thead-light'>
                 <tr>
                   <th></th>
@@ -142,7 +142,7 @@
         </div><!-- .card-header -->
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table table-hover table-sm">
+            <table class="table table-bordered table-hover table-sm">
               <thead class='thead-light'>
                 <tr>
                   <th>Project Title</th>

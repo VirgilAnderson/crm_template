@@ -42,7 +42,7 @@
         </div><!-- .card-header -->
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table table-hover table-sm">
+            <table class="table table-bordered table-hover table-sm">
               <thead>
                 <tr class='thead-light'>
                   <th>First Name</th>
