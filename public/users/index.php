@@ -44,7 +44,7 @@
           <div class="table-responsive">
             <table class="table table-hover table-sm">
               <thead>
-                <tr>
+                <tr class='thead-light'>
                   <th>First Name</th>
                   <th>Last Name</th>
                   <th>Email</th>
