@@ -3,8 +3,8 @@
 <?php
   // Ensure User Logged In
   require_login();
-  
-  // get user id, if not set redirect back to user listings page
+
+  // get user id, if not set redirect back to user/index.php
   $user_id = $_GET['user_id'] ?? false;
   if(!$user_id) {
     redirect_to('index.php');

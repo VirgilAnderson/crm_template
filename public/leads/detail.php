@@ -3,6 +3,19 @@
   // Ensure User Logged In
   require_login();
 
+  // get lead id, if not set redirect back to lead/index.php page
+  $lead_id = $_GET['lead_id'] ?? false;
+  if(!$lead_id) {
+    redirect_to('index.php');
+  }
+
+  // Search for user by id
+  $lead = Lead::find_by_id($lead_id);
+
+  // Search for the lead's user
+  $user_id = $lead->user_id;
+  $user = User::find_by_id($user_id);
+
 ?>
 
 <?php $page_title = "Lead Details"; ?>
