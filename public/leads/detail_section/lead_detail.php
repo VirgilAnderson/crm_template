@@ -13,11 +13,11 @@
   </dl>
   <dl class="list-group-item">
     <dt>Phone</dt>
-    <dd><?php echo $lead->lead_phone; ?></dd>
+    <dd><?php echo $lead->lead_phone_number; ?></dd>
   </dl>
   <dl class="list-group-item">
     <dt>Mobile</dt>
-    <dd><?php echo $lead->lead_mobile; ?></dd>
+    <dd><?php echo $lead->lead_mobile_phone; ?></dd>
   </dl>
   <dl class="list-group-item">
     <dt>Email</dt>
