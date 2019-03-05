@@ -4,6 +4,9 @@
   // Ensure User Logged In
   require_login();
 
+  // Ensure User is Admin
+  require_admin();
+
   // If Post Request Process form
   if(is_post_request()) {
     // Get input data

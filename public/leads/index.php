@@ -3,9 +3,10 @@
   // Ensure User Logged In
   require_login();
 
-  // Find all lead query
+  // Find all user leads query
   $sql = "SELECT * FROM lead ";
-  $sql .= "ORDER BY id DESC";
+  $sql .= "WHERE user_id=" . $session->user_id;
+  $sql .= " ORDER BY id DESC";
   $lead = Lead::find_by_sql($sql);
 
 

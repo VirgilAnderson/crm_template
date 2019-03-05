@@ -7,9 +7,9 @@
 
   // Find all lead query
   $sql = "SELECT * FROM lead ";
-  $sql .= "ORDER BY id DESC";
+  $sql .= "WHERE user_id=" . $session->user_id;
+  $sql .= " ORDER BY id DESC";
   $lead = Lead::find_by_sql($sql);
-
 ?>
 
 <!-- breadcrumbs -->
@@ -17,6 +17,7 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item active"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
   </ol>
+
 </div><!-- .container mt-4 -->
 
 <!-- main container -->

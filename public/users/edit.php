@@ -3,6 +3,9 @@
   // Ensure User Logged In
   require_login();
 
+  // Ensure User is Admin
+  require_admin();
+
   // Get user_id if set
   $user_id = $_GET['user_id'] ?? false;
 

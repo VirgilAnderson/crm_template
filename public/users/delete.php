@@ -3,6 +3,9 @@
   // Ensure User Logged In
   require_login();
 
+  // Ensure User is Admin
+  require_admin();
+
   // Get the user id else redirect to index.php
   $user_id = $_GET['user_id'] ?? false;
   if($user_id) {
