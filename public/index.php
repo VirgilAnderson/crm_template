@@ -4,6 +4,12 @@
 <?php
   // Ensure User Logged In
   require_login();
+
+  // Find all lead query
+  $sql = "SELECT * FROM lead ";
+  $sql .= "ORDER BY id DESC";
+  $lead = Lead::find_by_sql($sql);
+
 ?>
 
 <!-- breadcrumbs -->
@@ -90,13 +96,15 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <?php foreach ($lead as $lead) { ?>
+                <tr class='clickable-row' data-href="<?php echo url_for('leads/detail.php?lead_id=' . $lead->id); ?>">
                   <td><span class='badge badge-info'>new</span></td>
-                  <td>First Name</td>
-                  <td>Last Name</td>
-                  <td>Lead Source</td>
+                  <td><?php echo $lead->lead_first_name; ?></td>
+                  <td><?php echo $lead->lead_last_name; ?></td>
+                  <td><?php echo $lead->lead_source; ?></td>
                 </tr>
               </tbody>
+              <?php } ?>
             </table>
             <ul class="pagination pagination-sm justify-content-center">
               <li class="page-item">
