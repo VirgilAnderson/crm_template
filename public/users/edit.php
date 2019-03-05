@@ -50,6 +50,9 @@
 
   <form class="col-sm-6" action="<?php echo url_for('/users/edit.php?user_id=' . $user_id); ?>" method="post">
       <h2><i class="far fa-edit"></i> Edit <?php echo $user->full_name(); ?></h2>
+      <div class='text-danger errors'>
+        <?php echo display_errors($user->errors); ?>
+      </div>
       <fieldset class="form-group">
         <legend>User Information</legend>
 

@@ -25,7 +25,7 @@
         <option value='<?php echo $role; ?>' <?php if($role == $user->user_role) {echo 'selected'; } ?>><?php echo $role; ?></option>
       <?php } ?>
     </select>
-
+ 
 </div><!-- form-group -->
 
 <div class="form-group">
