@@ -3,9 +3,12 @@
   // Ensure User Logged In
   require_login();
 
-  // Find all user leads query
+  // Find all open user leads query
   $sql = "SELECT * FROM lead ";
   $sql .= "WHERE user_id=" . $session->user_id;
+  $sql .= " AND lead_status!='Closed' ";
+  $sql .= " AND lead_status!='Closed - Disqualified' ";
+  $sql .= " AND lead_status!='Closed - Not Interested' ";
   $sql .= " ORDER BY id DESC";
   $lead = Lead::find_by_sql($sql);
 
