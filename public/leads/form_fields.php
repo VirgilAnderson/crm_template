@@ -26,8 +26,8 @@
 </div><!-- form-group -->
 
 <div class="form-group">
-  <label class="form-control-label" for="lead[lead_address]">Address</el>
-  <input class="form-control" type="text" name="lead[lead_address]" ue='<?php echo h($lead->lead_address); ?>'>
+  <label class="form-control-label" for="lead[lead_address]">Address</label>
+  <input class="form-control" type="text" name="lead[lead_address]" value='<?php echo h($lead->lead_address); ?>'>
 </div><!-- form-group -->
 
 <div class="form-group">

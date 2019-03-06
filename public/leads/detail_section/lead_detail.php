@@ -28,6 +28,22 @@
     <dd><?php echo $lead->lead_email; ?></dd>
   </dl>
   <dl class="list-group-item">
+    <dt>Address</dt>
+    <dd><?php echo $lead->lead_address; ?></dd>
+  </dl>
+  <dl class="list-group-item">
+    <dt>City</dt>
+    <dd><?php echo $lead->lead_city; ?></dd>
+  </dl>
+  <dl class="list-group-item">
+    <dt>State</dt>
+    <dd><?php echo $lead->lead_state; ?></dd>
+  </dl>
+  <dl class="list-group-item">
+    <dt>Zip Code</dt>
+    <dd><?php echo $lead->lead_zip_code; ?></dd>
+  </dl>
+  <dl class="list-group-item">
     <dt>Title</dt>
     <dd><?php echo $lead->lead_role; ?></dd>
   </dl>
