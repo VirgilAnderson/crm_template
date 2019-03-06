@@ -3,9 +3,6 @@
   // Ensure User Logged In
   require_login();
 
-  // Ensure User is Admin
-  require_admin();
-
   // Find all user query
   $sql = "SELECT * FROM user ";
   $sql .= "ORDER BY id DESC";
