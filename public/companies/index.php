@@ -4,13 +4,10 @@
   require_login();
 
   // Find all open user leads query
-  $sql = "SELECT * FROM lead ";
+  $sql = "SELECT * FROM company ";
   $sql .= "WHERE user_id=" . $session->user_id;
-  $sql .= " AND lead_status!='Closed' ";
-  $sql .= " AND lead_status!='Closed - Disqualified' ";
-  $sql .= " AND lead_status!='Closed - Not Interested' ";
   $sql .= " ORDER BY id DESC";
-  $lead = Lead::find_by_sql($sql);
+  $company = Company::find_by_sql($sql);
 ?>
 
 <?php $page_title = "Companies"; ?>
@@ -54,15 +51,15 @@
                 </tr>
               </thead>
               <tbody>
-
-
-                <tr class='clickable-row' data-href="">
-                  <td>company_name</td>
-                  <td>city</td>
-                  <td>state</td>
-                  <td>company_url</td>
+                <?php foreach ($company as $company) { ?>
+                <tr class='clickable-row' data-href="<?php echo url_for('companies/detail.php?company_id=' . $company->id); ?>">
+                  <td><?php echo $company->company_name; ?></td>
+                  <td><?php echo $company->company_city; ?></td>
+                  <td><?php echo $company->company_state; ?></td>
+                  <td><?php echo $company->company_url; ?></td>
                 </tr>
             </tbody>
+                <?php } ?>
             </table>
           </div><!-- .table-responsive -->
 
