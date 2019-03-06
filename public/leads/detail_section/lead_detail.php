@@ -4,6 +4,10 @@
     <h3><?php echo $lead->full_name(); ?></h3>
   </dl>
   <dl class="list-group-item">
+    <dt>Lead Status</dt>
+    <dd><?php echo $lead->lead_status; ?></dd>
+  </dl>
+  <dl class="list-group-item">
     <dt>First Name</dt>
     <dd><?php echo $lead->lead_first_name; ?></dd>
   </dl>

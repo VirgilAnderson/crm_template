@@ -72,8 +72,8 @@
         <div class="card-footer">
           <div class='btn-group'>
             <a href='<?php echo url_for('Leads/new.php'); ?>' class="btn btn-outline-info"><i class="far fa-plus-square"></i> New Lead</a>
-            <a href='<?php echo url_for('Leads/delete.php'); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Lead</a>
-            <a href='<?php echo url_for('Leads/edit.php'); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Lead</a>
+            <a href='<?php echo url_for('Leads/delete.php?lead_id=' . $lead_id); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Lead</a>
+            <a href='<?php echo url_for('Leads/edit.php?lead_id=' . $lead_id); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Lead</a>
           </div><!-- .btn-group -->
         </div><!-- .card-footer -->
       </div><!-- .card -->
