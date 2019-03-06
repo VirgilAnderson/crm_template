@@ -81,7 +81,7 @@
       <div class="form-group">
         <label for="lead[lead_date]">Lead Date:</label>
           <select class="form-control" name="lead[lead_date]">
-              <option value='<?php echo date('d/m/Y'); ?>'><?php echo date('d/m/Y'); ?></option>
+              <option value='<?php echo date("Y/m/d"); ?>'><?php echo date("Y/m/d"); ?></option>
           </select>
       </div><!-- form-group -->
 

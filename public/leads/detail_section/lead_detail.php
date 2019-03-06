@@ -33,7 +33,13 @@
   </dl>
   <dl class="list-group-item">
     <dt>Date Created</dt>
-    <dd>Lead Birthdate</dd>
+    <dd>
+      <?php
+        // Convert date to month/day/year
+        $time = strtotime($lead->lead_date);
+        echo date("m/d/Y", $time);
+      ?>
+    </dd>
   </dl>
   <dl class="list-group-item">
     <dt>Lead Owner</dt>
