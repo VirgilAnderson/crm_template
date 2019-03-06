@@ -3,6 +3,19 @@
   // Ensure User Logged In
   require_login();
 
+  // Get company id, if not set redireect back to companies/index.php
+  $company_id = $_GET['company_id'] ?? false;
+  if(!$company_id) {
+    redirect_to(url_for('companies/index.php'));
+  }
+
+  // Search for company by id
+  $company = Company::find_by_id($company_id);
+
+  // Search for the company user
+  $user_id = $company->user_id;
+  $user = User::find_by_id($user_id);
+
 ?>
 
 <?php $page_title = "Company Details"; ?>

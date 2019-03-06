@@ -1,38 +1,38 @@
 <!-- Company Detail -->
 <ul class="list-group list-group-flush">
   <dl class="list-group-item">
-    <h3>Company Name</h3>
+    <h3><?php echo $company->company_name; ?></h3>
   </dl>
   <dl class="list-group-item">
     <dt>Address</dt>
-    <dd>company_address</dd>
+    <dd><?php echo $company->company_address; ?></dd>
   </dl>
   <dl class="list-group-item">
     <dt>City</dt>
-    <dd>company_city</dd>
+    <dd><?php echo $company->company_city; ?></dd>
   </dl>
   <dl class="list-group-item">
     <dt>State</dt>
-    <dd>company_state</dd>
+    <dd><?php echo $company->company_state; ?></dd>
   </dl>
   <dl class="list-group-item">
     <dt>Zip</dt>
-    <dd>company_zip</dd>
+    <dd><?php echo $company->company_zip_code; ?></dd>
   </dl>
   <dl class="list-group-item">
     <dt>Company Phone</dt>
-    <dd>Company Phone</dd>
+    <dd><?php echo $company->company_phone; ?></dd>
   </dl>
   <dl class="list-group-item">
     <dt>URL</dt>
-    <dd>company_url</dd>
+    <dd><a href='http://<?php echo $company->company_url; ?>' target='_blank'><?php echo $company->company_url; ?></a></dd>
   </dl>
   <dl class="list-group-item">
     <dt>Industry</dt>
-    <dd>Industry</dd>
+    <dd><?php echo $company->company_industry; ?></dd>
   </dl>
   <dl class="list-group-item">
     <dt>Company Owner</dt>
-    <dd>username</dd>
+    <dd><?php echo $user->user_username; ?></dd>
   </dl>
 </ul> <!-- end company detail -->

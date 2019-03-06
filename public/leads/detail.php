@@ -3,10 +3,10 @@
   // Ensure User Logged In
   require_login();
 
-  // get lead id, if not set redirect back to lead/index.php page
+  // get lead id, if not set redirect back to leads/index.php
   $lead_id = $_GET['lead_id'] ?? false;
   if(!$lead_id) {
-    redirect_to('index.php');
+    redirect_to(url_for('leads/index.php'));
   }
 
   // Search for user by id
