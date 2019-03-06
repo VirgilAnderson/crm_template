@@ -3,6 +3,29 @@
   // Ensure User Logged In
   require_login();
 
+  // If Post Request Process form
+  if(is_post_request()) {
+    // Get input data
+    $args = $_POST['lead'];
+    $lead = new Lead($args);
+    $result = $lead->save();
+
+    // Verify success
+    if($result === true){
+      $new_id = $lead->id;
+      // Add session message
+      // $session->message('User was created successfully');
+      redirect_to(url_for('leads/detail.php?lead_id=' . $new_id));
+    } else {
+      echo 'error';
+    }
+
+  } else {
+    // Display blank Form
+    $lead = new Lead;
+  }
+
+
 ?>
 
 <?php $page_title = "New lead"; ?>
@@ -19,8 +42,11 @@
 
 <!-- main container -->
 <div class='container'>
-  <form class="col-sm-6" action=""  method="post">
+  <form class="col-sm-6" action="<?php echo url_for('leads/new.php'); ?>"  method="post">
       <h2><i class="far fa-plus-square"></i> New Lead</h2>
+      <div class='text-danger errors'>
+        <?php echo display_errors($lead->errors); ?>
+      </div>
       <fieldset class="form-group">
         <legend>Fill in the form to create a new record</legend>
 
