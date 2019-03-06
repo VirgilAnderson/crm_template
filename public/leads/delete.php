@@ -3,6 +3,29 @@
   // Ensure User Logged In
   require_login();
 
+  // Ensure User is Admin
+  require_admin();
+
+  // Get the lead id else redirect to index.php
+  $lead_id = $_GET['lead_id'] ?? false;
+  if($lead_id) {
+    // Search for lead by id
+    $lead = Lead::find_by_id($lead_id);
+  } else {
+    // If not set, redirect to leads page
+    redirect_to(url_for('leads/index.php'));
+  }
+
+  // If post request, process the form
+  if(is_post_request()) {
+    // Delete
+    $result = $lead->delete();
+    //$session->message('The account was successfully deleted.');
+    //$session->logout();
+    redirect_to(url_for('/leads/index.php'));
+  }
+?>
+
 ?>
 
 <?php $page_title = "Delete lead"; ?>
@@ -27,7 +50,7 @@
         </div><!-- .card-header -->
         <div class="card-body">
           <p>Are you sure you want to delete?</p>
-          <p>First Name</p>
+          <p><?php echo $lead->full_name(); ?></p>
           <form class="col-sm-6" action="" method="post">
             <fieldset class="form-group">
               <button class="btn btn-outline-info" type="submit"><i class="far fa-trash-alt"></i> Delete</button>
