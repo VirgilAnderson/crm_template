@@ -3,7 +3,7 @@
   // Ensure User Logged In
   require_login();
 
-  // Find all open user leads query
+  // Find all user leads query
   $sql = "SELECT * FROM company ";
   $sql .= "WHERE user_id=" . $session->user_id;
   $sql .= " ORDER BY id DESC";

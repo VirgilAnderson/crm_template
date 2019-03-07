@@ -3,6 +3,12 @@
   // Ensure User Logged In
   require_login();
 
+  // Find all open user leads query
+  $sql = "SELECT * FROM project ";
+  $sql .= "WHERE user_id=" . $session->user_id;
+  $sql .= " ORDER BY id DESC";
+  $project = Project::find_by_sql($sql);
+
 ?>
 
 <?php $page_title = "Projects"; ?>
@@ -46,13 +52,24 @@
                 </tr>
               </thead>
               <tbody>
-                <tr class='clickable-row' data-href="">
-                  <td>title</td>
-                  <td>state</td>
-                  <td>company_name</td>
-                  <td>username</td>
+                <?php foreach($project as $project) { ?>
+                <tr class='clickable-row' data-href="<?php echo url_for('projects/detail.php?project_id=' . $project->id); ?>">
+                  <td><?php echo $project->project_name; ?></td>
+                  <td><?php echo $project->project_status; ?></td>
+                  <?php if($project->company_id) {
+                    // Search for company by id
+                    $company = Company::find_by_id($project->company_id);
+                  } ?>
+                  <td><?php echo $company->company_name; ?></td>
+                  <?php if($project->user_id) {
+                    // Search for project owner
+                    $user_id = $project->user_id;
+                    $user = User::find_by_id($user_id);
+                  } ?>
+                  <td><?php echo $user->user_username; ?></td>
                 </tr>
             </tbody>
+                <?php } ?>
             </table>
           </div><!-- .table-responsive -->
 
