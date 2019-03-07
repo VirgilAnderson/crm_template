@@ -10,6 +10,12 @@
   $sql .= "WHERE user_id=" . $session->user_id;
   $sql .= " ORDER BY id DESC";
   $lead = Lead::find_by_sql($sql);
+
+  // Find all user projects
+  $sql = "SELECT * FROM project ";
+  $sql .= "WHERE user_id=" . $session->user_id;
+  $sql .= " ORDER BY id DESC";
+  $project = Project::find_by_sql($sql);
 ?>
 
 <!-- breadcrumbs -->
@@ -153,13 +159,24 @@
                 </tr>
               </thead>
               <tbody>
-                <tr class='clickable-row' data-href="">
-                  <td>Project Title</td>
-                  <td>Project State</td>
-                  <td>Company Name</td>
-                  <td>Username</td>
+                <?php foreach($project as $project) { ?>
+                <tr class='clickable-row' data-href="<?php echo url_for('projects/detail.php?project_id=' . $project->id); ?>">
+                  <td><?php echo $project->project_name; ?></td>
+                  <td><?php echo $project->project_status; ?></td>
+                  <?php if($project->company_id) {
+                    // Search for company by id
+                    $company = Company::find_by_id($project->company_id);
+                  } ?>
+                  <td><?php echo $company->company_name; ?></td>
+                  <?php if($project->user_id) {
+                    // Search for project owner
+                    $user_id = $project->user_id;
+                    $user = User::find_by_id($user_id);
+                  } ?>
+                  <td><?php echo $user->user_username; ?></td>
                 </tr>
             </tbody>
+                <?php } ?>
             </table>
             <ul class="pagination pagination-sm justify-content-center">
               <li class="page-item">

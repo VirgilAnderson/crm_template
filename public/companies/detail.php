@@ -16,6 +16,9 @@
   $user_id = $company->user_id;
   $user = User::find_by_id($user_id);
 
+  // Search for project by id
+  $project = Project::find_project_by_company_id($company->id);
+
 ?>
 
 <?php $page_title = "Company Details"; ?>
