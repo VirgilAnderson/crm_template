@@ -30,8 +30,6 @@
     $lead = new Lead;
 
   }
-
-
 ?>
 
 <?php $page_title = "New lead"; ?>

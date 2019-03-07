@@ -4,7 +4,7 @@
 </div><!-- form-group -->
 
 <div class="form-group">
-  <label class="form-control-label" for="company[company_addres]">Company Address</label>
+  <label class="form-control-label" for="company[company_address]">Company Address</label>
   <input class="form-control" type="text" name="company[company_address]" >
 </div><!-- form-group -->
 
@@ -39,17 +39,17 @@
 </div><!-- form-group -->
 
 <div class="form-group">
-  <label for="">Industry:</label>
-    <select class="form-control" name="">
+  <label for="company[company_industry]">Industry:</label>
+    <select class="form-control" name="company[company_industry]">
       <?php foreach(COMPANY::INDUSTRY_OPTIONS as $industry) { ?>
-      <option value=""></option>
+      <option value="<?php echo $industry; ?>" <?php if($industry == $company->company_industry) { echo 'selected'; } ?>><?php echo $industry; ?></option>
       <?php } ?>
     </select>
 </div><!-- form-group -->
 
 <div class="form-group">
   <label for="lead_source">Company Owner:</label>
-    <select class="form-control" name="company[company_]">
+    <select class="form-control" name="company[user_id]">
       <?php foreach($user as $user) { ?>
         <option value='<?php echo $user->id; ?>' <?php if($user->user_username == $session->username) {echo 'selected'; } ?>><?php echo $user->user_username; ?></option>
       <?php } ?>
