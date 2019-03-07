@@ -3,6 +3,22 @@
   // Ensure User Logged In
   require_login();
 
+  // Get project id, if not set redireect back to projects/index.php
+  $project_id = $_GET['project_id'] ?? false;
+  if(!$project_id) {
+    redirect_to(url_for('projects/index.php'));
+  }
+
+  // Search for project by id
+  $project = Project::find_by_id($project_id);
+
+  // Search for the project user
+  $user_id = $project->user_id;
+  $user = User::find_by_id($user_id);
+
+  // Search for company by id
+  $company = Company::find_by_id($project->company_id);
+
 ?>
 
 <?php $page_title = "Project Details"; ?>
@@ -58,8 +74,8 @@
         </div><!-- .card-body -->
         <div class="card-footer">
           <div class='btn-group'>
-            <a href='<?php echo url_for('Projects/delete.php'); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Project</a>
-            <a href='<?php echo url_for('Projects/edit.php'); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Project</a>
+            <a href='<?php echo url_for('projects/delete.php?project_id=' . $project_id); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Project</a>
+            <a href='<?php echo url_for('projects/edit.php?project_id=' . $project_id); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Project</a>
           </div><!-- .btn-group -->
         </div><!-- .card-footer -->
       </div><!-- .card -->

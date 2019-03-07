@@ -1,22 +1,22 @@
 <!-- project detail -->
 <ul class="list-group list-group-flush">
   <dl class="list-group-item">
-    <h3>Project Title</h3>
+    <h3><?php echo $project->project_name; ?></h3>
   </dl>
   <dl class="list-group-item">
     <dt>Project State</dt>
-    <dd>project_state</dd>
+    <dd><?php echo $project->project_status; ?></dd>
   </dl>
   <dl class="list-group-item">
     <dt>Project Description</dt>
-    <dd>project_description</dd>
+    <dd><?php echo $project->project_description; ?></dd>
   </dl>
   <dl class="list-group-item">
     <dt>Company</dt>
-    <dd>company_name</dd>
+    <dd><?php echo $company->company_name; ?></dd>
   </dl>
   <dl class="list-group-item">
     <dt>Project Owner</dt>
-    <dd>username</dd>
+    <dd><?php echo $user->user_username; ?></dd>
   </dl>
 </ul> <!-- end project detail -->
