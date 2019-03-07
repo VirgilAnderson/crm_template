@@ -3,6 +3,12 @@
   // Ensure User Logged In
   require_login();
 
+  // Find all user contacts query
+  $sql = "SELECT * FROM contact ";
+  $sql .= "WHERE user_id=" . $session->user_id;
+  $sql .= " ORDER BY id DESC";
+  $contact = Contact::find_by_sql($sql);
+
 ?>
 
 <?php $page_title = "Contacts"; ?>
@@ -48,15 +54,16 @@
                 </tr>
               </thead>
               <tbody>
-
-                <tr class='clickable-row' data-href="">
+                <?php foreach($contact as $contact) { ?>
+                <tr class='clickable-row' data-href="<?php echo url_for('contacts/detail.php?contact_id=' . $contact->id); ?>">
                   <td><span class='badge badge-info'>new</span></td>
-                  <td>first_name</td>
-                  <td>last_name</td>
-                  <td>role</td>
-                  <td>source</td>
+                  <td><?php echo $contact->contact_first_name; ?></td>
+                  <td><?php echo $contact->contact_last_name; ?></td>
+                  <td><?php echo $contact->contact_title; ?></td>
+                  <td><?php echo $contact->contact_lead_source; ?></td>
                 </tr>
             </tbody>
+                <?php } ?>
             </table>
           </div><!-- .table-responsive -->
 
