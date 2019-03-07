@@ -3,6 +3,21 @@
   // Ensure User Logged In
   require_login();
 
+  // Get contact id, if not set redirect back to contactss/index.php
+  $contact_id = $_GET['contact_id'] ?? false;
+  if(!$contact_id) {
+    redirect_to(url_for('contacts/index.php'));
+  }
+
+  // Search for contact by id
+  $contact = Contact::find_by_id($contact_id);
+
+  // Search for company by id
+  $company = Company::find_by_id($contact->company_id);
+
+  // Search for project by id
+  $project = Project::find_by_id($contact->project_id);
+
 ?>
 
 <?php $page_title = "Contact Details"; ?>
