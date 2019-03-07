@@ -3,9 +3,6 @@
   // Ensure User Logged In
   require_login();
 
-  // Ensure User is Admin
-  require_admin();
-
   // Get the lead id else redirect to index.php
   $lead_id = $_GET['lead_id'] ?? false;
   if($lead_id) {

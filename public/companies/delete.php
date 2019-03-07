@@ -3,6 +3,8 @@
   // Ensure User Logged In
   require_login();
 
+  
+
 ?>
 
 <?php $page_title = "Delete Company"; ?>
