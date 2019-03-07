@@ -17,12 +17,9 @@
   if(is_post_request()) {
     // Delete
     $result = $lead->delete();
-    //$session->message('The account was successfully deleted.');
-    //$session->logout();
+    $session->message('The account was successfully deleted.');
     redirect_to(url_for('/leads/index.php'));
   }
-?>
-
 ?>
 
 <?php $page_title = "Delete lead"; ?>
