@@ -1,7 +1,9 @@
 <?php require_once('../../private/initialize.php'); ?>
 <?php
-  // Ensure User Logged In
+  // Ensure Project Logged In
   require_login();
+
+  
 
 ?>
 

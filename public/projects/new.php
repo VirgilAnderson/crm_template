@@ -3,6 +3,37 @@
   // Ensure User Logged In
   require_login();
 
+  // Find all user query
+  $sql = "SELECT * FROM user ";
+  $sql .= "ORDER BY id DESC";
+  $user = User::find_by_sql($sql);
+
+  // Find all companies query
+  $sql = "SELECT * FROM company ";
+  $sql .= "ORDER BY id DESC";
+  $company = Company::find_by_sql($sql);
+
+  // If Post Request Process form
+  if(is_post_request()) {
+    // Get input data
+    $args = $_POST['project'];
+    $project = new Project($args);
+    $result = $project->save();
+
+    // Verify success
+    if($result === true){
+      $new_id = $project->id;
+      // Add session message
+      $session->message('Project was created successfully');
+      redirect_to(url_for('projects/detail.php?project_id=' . $new_id));
+    } else {
+      echo 'error';
+    }
+
+  } else {
+    // Display blank Form
+    $project = new Project;
+  }
 ?>
 
 <?php $page_title = "New Project"; ?>

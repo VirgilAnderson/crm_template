@@ -1,11 +1,11 @@
 <div class="form-group">
-  <label class="form-control-label" for="project_title">Project Title</label>
-  <input class="form-control" type="text" name="project_title" >
+  <label class="form-control-label" for="project[project_name]">Project Title</label>
+  <input class="form-control" type="text" name="project[project_name]" >
 </div><!-- .form-group -->
 
 <div class="form-group">
-  <label for="project_state">Project State</label>
-      <select class="form-control" name="project_state">
+  <label for="project[project_status]">Project State</label>
+      <select class="form-control" name="project[project_status]">
         <option value="Not Started">Not Started</option>
         <option value="In Progress">In Progress</option>
         <option value="Complete">Complete</option>
@@ -15,21 +15,24 @@
 </div><!-- form-group -->
 
 <div class="form-group">
-  <label for="project_description">Project Description</label>
-  <textarea class="form-control" rows="5" name="project_description"></textarea>
+  <label for="project[project_description]">Project Description</label>
+  <textarea class="form-control" rows="5" name="project[project_description]"></textarea>
 </div><!-- .form-group -->
 
 <div class="form-group">
-  <label for="company_id">Company:</label>
-    <select class="form-control" name="company_id">
-        <option value='none'>none</option>
-        <option value="">Company Name</option>
+  <label for="project[company_id]">Company:</label>
+    <select class="form-control" name="project[company_id]">
+      <?php foreach($company as $company) { ?>
+        <option value='<?php echo $company->id ?>'><?php echo $company->company_name; ?></option>
+      <?php } ?>
     </select>
 </div><!-- form-group -->
 
 <div class="form-group">
-  <label for="user_id">project Owner:</label>
-    <select class="form-control" name="user_id">
-      <option value="" >Username</option>
+  <label for="project[user_id]">project Owner:</label>
+    <select class="form-control" name="project[user_id]">
+      <?php foreach($user as $user) { ?>
+        <option value='<?php echo $user->id; ?>' <?php if($user->user_username == $session->username) {echo 'selected'; } ?>><?php echo $user->user_username; ?></option>
+      <?php } ?>
     </select>
 </div><!-- form-group -->
