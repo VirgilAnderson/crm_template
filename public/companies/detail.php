@@ -71,8 +71,8 @@
         </div><!-- .card-body -->
         <div class="card-footer">
           <div class='btn-group'>
-            <a href='<?php echo url_for('Companies/delete.php'); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Company</a>
-            <a href='<?php echo url_for('Companies/edit.php'); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Company</a>
+            <a href='<?php echo url_for('Companies/delete.php?company_id=' . $company_id); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Company</a>
+            <a href='<?php echo url_for('Companies/edit.php?company_id=' . $company_id); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Company</a>
           </div><!-- .btn-group -->
         </div><!-- .card-footer -->
       </div><!-- .card -->

@@ -8,7 +8,7 @@
   $sql .= "ORDER BY id DESC";
   $user = User::find_by_sql($sql);
 
-  // Get user_id if set
+  // Get lead_id if set
   $lead_id = $_GET['lead_id'] ?? false;
 
   // If lead_id is set, then query the db

@@ -1,41 +1,41 @@
 <div class="form-group">
   <label class="form-control-label" for="company[company_name]">Company Name</label>
-  <input class="form-control" type="text" name="company[company_name]" >
+  <input class="form-control" type="text" name="company[company_name]" value='<?php echo $company->company_name; ?>'>
 </div><!-- form-group -->
 
 <div class="form-group">
   <label class="form-control-label" for="company[company_address]">Company Address</label>
-  <input class="form-control" type="text" name="company[company_address]" >
+  <input class="form-control" type="text" name="company[company_address]" value='<?php echo $company->company_address; ?>'>
 </div><!-- form-group -->
 
 <div class="form-group">
   <label class="form-control-label" for="company[company_city]">Company City</label>
-  <input class="form-control" type="text" name="company[company_city]" >
+  <input class="form-control" type="text" name="company[company_city]" value='<?php echo $company->company_city; ?>'>
 </div><!-- form-group -->
 
 <div class="form-group">
   <label class="form-control-label" for="company[company_state]">Company State</label>
-  <input class="form-control" type="text" name="company[company_state]">
+  <input class="form-control" type="text" name="company[company_state]" value='<?php echo $company->company_state; ?>'>
 </div><!-- form-group -->
 
 <div class="form-group">
   <label class="form-control-label" for="company[company_zip_code]">Company Zip</label>
-  <input class="form-control" type="text" name="company[company_zip_code]">
+  <input class="form-control" type="text" name="company[company_zip_code]" value='<?php echo $company->company_zip_code; ?>'>
 </div><!-- form-group -->
 
 <div class="form-group">
   <label class="form-control-label" for="company[company_phone]">Company phone</label>
-  <input class="form-control" type="text" name="company[company_phone]">
+  <input class="form-control" type="text" name="company[company_phone]" value='<?php echo $company->company_phone; ?>'>
 </div><!-- form-group -->
 
 <div class="form-group">
   <label class="form-control-label" for="company[company_fax]">Company fax</label>
-  <input class="form-control" type="text" name="company[company_fax]">
+  <input class="form-control" type="text" name="company[company_fax]" value='<?php echo $company->company_fax; ?>'>
 </div><!-- form-group -->
 
 <div class="form-group">
   <label class="form-control-label" for="company[company_url]">Company url</label>
-  <input class="form-control" type="text" name="company[company_url]">
+  <input class="form-control" type="text" name="company[company_url]" value='<?php echo $company->company_url; ?>'>
 </div><!-- form-group -->
 
 <div class="form-group">
