@@ -3,6 +3,23 @@
   // Ensure User Logged In
   require_login();
 
+  // Get the project id else redirect to index.php
+  $project_id = $_GET['project_id'] ?? false;
+  if($project_id) {
+    // Search for project by id
+    $project = Project::find_by_id($project_id);
+  } else {
+    // If not set, redirect to projects page
+    redirect_to(url_for('projects/index.php'));
+  }
+
+  // If post request, process the form
+  if(is_post_request()) {
+    // Delete
+    $result = $project->delete();
+    $session->message('The project was successfully deleted.');
+    redirect_to(url_for('/projects/index.php'));
+  }
 ?>
 
 <?php $page_title = "Delete Project"; ?>
@@ -28,8 +45,8 @@
         </div><!-- .card-header -->
         <div class="card-body">
           <p>Are you sure you want to delete?</p>
-          <p>Project Name</p>
-          <form class="col-sm-6" action="" method="post">
+          <h4><?php echo $project->project_name; ?></h4>
+          <form class="col-sm-6 mt-3" action="<?php echo url_for('projects/delete.php?project_id=' . $project_id) ?>" method="post">
             <fieldset class="form-group">
               <button class="btn btn-outline-info" type="submit"><i class="far fa-trash-alt"></i> Delete</button>
             </fieldset><!-- fieldset -->
