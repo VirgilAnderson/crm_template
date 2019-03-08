@@ -41,8 +41,21 @@
       </div><!-- form-group -->
 
       <div class="form-group">
-        <label class="form-control-label" for="contact[contact_title]">Title</label>
-        <input class="form-control" type="text" name="contact[contact_title]" value='<?php echo $contact->contact_title; ?>'>
+        <label for="contact[contact_title]">Title</label>
+            <select class="form-control" name="contact[contact_title]">
+              <?php foreach (CONTACT::CONTACT_TITLE as $titles) {?>
+                <option value='<?php echo $titles; ?>' <?php if($titles == $contact->contact_title) { echo 'selected'; } ?>><?php echo $titles; ?></option>
+              <?php } ?>
+            </select>
+      </div><!-- form-group -->
+
+      <div class="form-group">
+        <label for="contact[contact_lead_source]">Contact Source</label>
+            <select class="form-control" name="contact[contact_lead_source]">
+              <?php foreach (CONTACT::CONTACT_SOURCE_OPTIONS as $source) {?>
+                <option value='<?php echo $source; ?>' <?php if($source == $contact->contact_lead_source) { echo 'selected'; } ?>><?php echo $source; ?></option>
+              <?php } ?>
+            </select>
       </div><!-- form-group -->
 
       <div class="form-group">
