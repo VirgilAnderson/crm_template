@@ -19,6 +19,12 @@
   // Search for company by id
   $company = Company::find_by_id($project->company_id);
 
+  // Search for the project contacts
+  $sql = "SELECT * FROM contact ";
+  $sql .= "WHERE project_id=";
+  $sql .= $project_id;
+  $contact = Contact::find_by_sql($sql);
+
 ?>
 
 <?php $page_title = "Project Details"; ?>
