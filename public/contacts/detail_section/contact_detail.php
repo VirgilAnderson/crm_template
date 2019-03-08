@@ -32,7 +32,7 @@
     <dd><?php echo $contact->contact_lead_source; ?></dd>
   </dl>
   <dl class="list-group-item">
-    <dt>Lead Owner</dt>
-    <dd><?php echo $contact->user_id; ?></dd>
+    <dt>Contact Owner</dt>
+    <dd><?php echo $user->user_username; ?></dd>
   </dl>
 </ul> <!-- end contact detail -->

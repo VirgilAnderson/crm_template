@@ -18,6 +18,10 @@
   // Search for project by id
   $project = Project::find_by_id($contact->project_id);
 
+  // Search for the contact owner
+  $user_id = $contact->user_id;
+  $user = User::find_by_id($user_id);
+
 ?>
 
 <?php $page_title = "Contact Details"; ?>
