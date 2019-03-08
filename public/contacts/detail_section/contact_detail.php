@@ -28,10 +28,6 @@
     <dd><?php echo $contact->contact_title; ?></dd>
   </dl>
   <dl class="list-group-item">
-    <dt>Lead source</dt>
-    <dd><?php echo $contact->contact_lead_source; ?></dd>
-  </dl>
-  <dl class="list-group-item">
     <dt>Contact Owner</dt>
     <dd><?php echo $user->user_username; ?></dd>
   </dl>

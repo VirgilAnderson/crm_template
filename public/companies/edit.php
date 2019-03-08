@@ -3,15 +3,10 @@
   // Ensure User Logged In
   require_login();
 
-  // Find all user query
-  $sql = "SELECT * FROM user ";
-  $sql .= "ORDER BY id DESC";
-  $user = User::find_by_sql($sql);
-
   // Get company_id if set
   $company_id = $_GET['company_id'] ?? false;
 
-  // If company_id is set, then query the db
+  // If company_id is set, query db
   if($company_id) {
     // Search for company by id
     $company = Company::find_by_id($company_id);
@@ -19,6 +14,11 @@
     // If not set, redirect to companies/index.php
     redirect_to(url_for('companies/index.php'));
   }
+
+  // Find all user query
+  $sql = "SELECT * FROM user ";
+  $sql .= "ORDER BY id DESC";
+  $user = User::find_by_sql($sql);
 
   // If post request, process the form
   if(is_post_request()) {
