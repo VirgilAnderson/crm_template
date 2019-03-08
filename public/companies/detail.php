@@ -16,6 +16,12 @@
   $user_id = $company->user_id;
   $user = User::find_by_id($user_id);
 
+  // Search for the company contacts
+  $sql = "SELECT * FROM contact ";
+  $sql .= "WHERE company_id=";
+  $sql .= $company_id;
+  $contact = Contact::find_by_sql($sql);
+
   // Search for project by id
   $project = Project::find_project_by_company_id($company->id);
 
