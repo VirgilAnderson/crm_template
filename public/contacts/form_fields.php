@@ -46,14 +46,7 @@
       </div><!-- form-group -->
 
       <div class="form-group">
-        <label for="contact[lead_source]">Select list:</label>
-          <select class="form-control" name="contact[lead_source]">
-          </select>
-      </div><!-- form-group -->
-
-      <div class="form-group">
         <label for="contact[company_id]">Company:</label>
-
             <select class="form-control" name="contact[company_id]">
               <?php foreach ($company as $company) {?>
                 <option value='<?php echo $company->id; ?>'><?php echo $company->company_name; ?></option>
