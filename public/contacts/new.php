@@ -8,6 +8,12 @@
   $sql .= "ORDER BY id DESC";
   $user = User::find_by_sql($sql);
 
+  // Find all user companies query
+  $sql = "SELECT * FROM company ";
+  $sql .= "WHERE user_id=" . $session->user_id;
+  $sql .= " ORDER BY id DESC";
+  $company = Company::find_by_sql($sql);
+
   // If Post Request Process form
   if(is_post_request()) {
     // Get input data
