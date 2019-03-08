@@ -1,64 +1,75 @@
 
 
       <div class="form-group">
-        <label class="form-control-label" for="first_name">First Name</label>
-        <input class="form-control" type="text" name="first_name" >
+        <label class="form-control-label" for="contact[contact_first_name]">First Name</label>
+        <input class="form-control" type="text" name="contact[contact_first_name]" >
       </div><!-- form-group -->
 
       <div class="form-group">
-        <label class="form-control-label" for="last_name">Last Name</label>
-        <input class="form-control" type="text" name="last_name" >
+        <label class="form-control-label" for="contact[contact_last_name]">Last Name</label>
+        <input class="form-control" type="text" name="contact[contact_last_name]" >
       </div><!-- form-group -->
 
       <div class="form-group">
-        <label class="form-control-label" for="phone_direct">Phone</label>
-        <input class="form-control" type="text" name="phone_direct" >
+        <label class="form-control-label" for="contact[contact_phone_number]">Phone</label>
+        <input class="form-control" type="text" name="contact[contact_phone_number]" >
       </div><!-- form-group -->
 
       <div class="form-group">
-        <label class="form-control-label" for="mobile_phone">Mobile</label>
-        <input class="form-control" type="text" name="mobile_phone" >
+        <label class="form-control-label" for="contact[contact_mobile_phone]">Mobile</label>
+        <input class="form-control" type="text" name="contact[contact_mobile_phone]" >
       </div><!-- form-group -->
 
       <div class="form-group">
-        <label class="form-control-label" for="email">Email</label>
-        <input class="form-control" type="text" name="email">
+        <label class="form-control-label" for="contact[contact_assistant_phone]">Assistant Phone</label>
+        <input class="form-control" type="text" name="contact[contact_assistant_phone]">
       </div><!-- form-group -->
 
       <div class="form-group">
-        <label class="form-control-label" for="title">Title</label>
-        <input class="form-control" type="text" name="title">
+        <label class="form-control-label" for="contact[contact_assistant_name]">Assistant Name</label>
+        <input class="form-control" type="text" name="contact[contact_assistant_name]">
       </div><!-- form-group -->
 
       <div class="form-group">
-        <label for="lead_source">Select list:</label>
-          <select class="form-control" name="lead_source">
-            <option>Web</option>
-            <option>Manual Entry</option>
-            <option>Lead List</option>
-            <option>Call In</option>
+        <label class="form-control-label" for="contact[contact_birthdate]">Contact Birthdate</label>
+        <input class="form-control" type="text" name="contact[contact_birthdate]">
+      </div><!-- form-group -->
+
+      <div class="form-group">
+        <label class="form-control-label" for="contact[contact_email]">Email</label>
+        <input class="form-control" type="text" name="contact[contact_email]">
+      </div><!-- form-group -->
+
+      <div class="form-group">
+        <label class="form-control-label" for="contact[contact_title]">Title</label>
+        <input class="form-control" type="text" name="contact[contact_title]">
+      </div><!-- form-group -->
+
+      <div class="form-group">
+        <label for="contact[lead_source]">Select list:</label>
+          <select class="form-control" name="contact[lead_source]">
           </select>
       </div><!-- form-group -->
 
       <div class="form-group">
-        <label for="company_id">Company:</label>
-            <select class="form-control" name="company_id">
-              <option value='none'>none</option>
+        <label for="contact[company_id]">Company:</label>
+            <select class="form-control" name="contact[company_id]">
+              <option value='2'>2</option>
               <option value="">Company</option>
             </select>
       </div><!-- form-group -->
 
       <div class="form-group">
-        <label for="project_id">Project:</label>
-            <select class="form-control" name="project_id">
-              <option value='none'>none</option>
+        <label for="contact[project_id]">Project:</label>
+            <select class="form-control" name="contact[project_id]">
+              <option value='2'>2</option>
               <option value="">Project Title</option>
             </select>
       </div><!-- form-group -->
 
       <div class="form-group">
-        <label for="lead_source">Lead Owner:</label>
-          <select class="form-control" name="user_id">
-            <option value="" ></option>
+        <label for="contact[user_id]">Lead Owner:</label>
+          <select class="form-control" name="contact[user_id]">
+            <option value="2" >2</option>
           </select>
       </div><!-- form-group -->

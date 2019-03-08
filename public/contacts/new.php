@@ -3,6 +3,34 @@
   // Ensure User Logged In
   require_login();
 
+  // Find all user query
+  $sql = "SELECT * FROM user ";
+  $sql .= "ORDER BY id DESC";
+  $user = User::find_by_sql($sql);
+
+  // If Post Request Process form
+  if(is_post_request()) {
+    // Get input data
+    $args = $_POST['contact'];
+    $contact = new Contact($args);
+    $result = $contact->save();
+
+    // Verify success
+    if($result === true){
+      $new_id = $contact->id;
+      // Add session message
+      $session->message('Contact was created successfully');
+      redirect_to(url_for('contacts/detail.php?contact_id=' . $new_id));
+    } else {
+      echo 'error';
+    }
+
+  } else {
+    // Display blank Form
+    $contact = new Contact;
+
+  }
+
 ?>
 
 <?php $page_title = "New Contact"; ?>
