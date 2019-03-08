@@ -73,6 +73,8 @@
       <div class="form-group">
         <label for="contact[user_id]">Lead Owner:</label>
           <select class="form-control" name="contact[user_id]">
-            <option value="2" >2</option>
+            <?php foreach($user as $user) { ?>
+              <option value="<?php echo $user->user_id; ?>" ><?php echo $user->user_username; ?></option>
+            <?php } ?>
           </select>
       </div><!-- form-group -->
