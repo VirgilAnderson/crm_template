@@ -64,8 +64,9 @@
       <div class="form-group">
         <label for="contact[project_id]">Project:</label>
             <select class="form-control" name="contact[project_id]">
-              <option value='2'>2</option>
-              <option value="">Project Title</option>
+              <?php foreach($project as $project) { ?>
+                <option value='<?php echo $project->id; ?>'><?php echo $project->project_name; ?></option>
+              <?php } ?>
             </select>
       </div><!-- form-group -->
 

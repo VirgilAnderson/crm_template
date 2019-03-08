@@ -14,6 +14,12 @@
   $sql .= " ORDER BY id DESC";
   $company = Company::find_by_sql($sql);
 
+  // Find all user projects
+  $sql = "SELECT * FROM project ";
+  $sql .= "WHERE user_id=" . $session->user_id;
+  $sql .= " ORDER BY id DESC";
+  $project = Project::find_by_sql($sql);
+
   // If Post Request Process form
   if(is_post_request()) {
     // Get input data
