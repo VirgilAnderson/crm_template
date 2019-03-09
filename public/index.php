@@ -16,6 +16,12 @@
   $sql .= "WHERE user_id=" . $session->user_id;
   $sql .= " ORDER BY id DESC";
   $project = Project::find_by_sql($sql);
+
+  // Find all user tasks query
+  $sql = "SELECT * FROM task ";
+  $sql .= "WHERE user_id=" . $session->user_id;
+  $sql .= " ORDER BY id DESC";
+  $task = Task::find_by_sql($sql);
 ?>
 
 <!-- breadcrumbs -->
@@ -43,19 +49,21 @@
                 <tr class='clickable-row' data-href="">
                   <th></th>
                   <th>Title</th>
-                  <th>Due Date</th>
-                  <th>Status</th>
                   <th>Task Type</th>
+                  <th>Status</th>
+                  <th>Due Date</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td><span class="badge badge-warning">Due Today</span></td>
-                  <td>task Name</td>
-                  <td>Date</td>
-                  <td>task state</td>
-                  <td>task type</td>
-                </tr>
+                <?php foreach($task as $task) { ?>
+                  <tr class='clickable-row' data-href="<?php echo url_for('tasks/detail.php?task_id=' . $task->id); ?>">
+                    <td><span class="badge badge-warning">Due Today</span></td>
+                    <td><?php echo $task->task_name; ?></td>
+                    <td><?php echo $task->task_type; ?></td>
+                    <td><?php echo $task->task_status; ?></td>
+                    <td><?php echo $task->task_due_date; ?></td>
+                  </tr>
+                <?php } ?>
               </tbody>
             </table>
             <ul class="pagination pagination-sm justify-content-center">

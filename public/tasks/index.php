@@ -3,7 +3,7 @@
   // Ensure User Logged In
   require_login();
 
-  // Find all user contacts query
+  // Find all user tasks query
   $sql = "SELECT * FROM task ";
   $sql .= "WHERE user_id=" . $session->user_id;
   $sql .= " ORDER BY id DESC";
