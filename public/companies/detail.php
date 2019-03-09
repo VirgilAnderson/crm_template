@@ -25,6 +25,11 @@
   // Search for project by id
   $project = Project::find_project_by_company_id($company->id);
 
+  // Search for the company's tasks
+  $sql = 'SELECT * FROM task ';
+  $sql .= "WHERE company_id=" . $company->id;
+  $task = Task::find_by_sql($sql);
+
 ?>
 
 <?php $page_title = "Company Details"; ?>
