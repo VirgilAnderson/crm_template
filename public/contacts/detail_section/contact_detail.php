@@ -20,12 +20,28 @@
     <dd><?php echo $contact->contact_mobile_phone; ?></dd>
   </dl>
   <dl class="list-group-item">
+    <dt>Assistant Phone</dt>
+    <dd><?php echo $contact->contact_assistant_phone; ?></dd>
+  </dl>
+  <dl class="list-group-item">
+    <dt>Assistant Name</dt>
+    <dd><?php echo $contact->contact_assistant_name; ?></dd>
+  </dl>
+  <dl class="list-group-item">
+    <dt>Contact Birthdate</dt>
+    <dd><?php echo $contact->contact_birthdate; ?></dd>
+  </dl>
+  <dl class="list-group-item">
     <dt>Email</dt>
     <dd><?php echo $contact->contact_email; ?></dd>
   </dl>
   <dl class="list-group-item">
     <dt>Title</dt>
     <dd><?php echo $contact->contact_title; ?></dd>
+  </dl>
+  <dl class="list-group-item">
+    <dt>Lead Source</dt>
+    <dd><?php echo $contact->contact_lead_source; ?></dd>
   </dl>
   <dl class="list-group-item">
     <dt>Contact Owner</dt>

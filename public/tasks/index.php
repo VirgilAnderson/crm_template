@@ -3,6 +3,12 @@
   // Ensure User Logged In
   require_login();
 
+  // Find all user contacts query
+  $sql = "SELECT * FROM task ";
+  $sql .= "WHERE user_id=" . $session->user_id;
+  $sql .= " ORDER BY id DESC";
+  $task = Task::find_by_sql($sql);
+
 ?>
 
 <?php $page_title = "Tasks"; ?>
@@ -47,12 +53,14 @@
                 </tr>
               </thead>
               <tbody>
-                <tr class='clickable-row' data-href="">
-                  <td>task_name</td>
-                  <td>task_type</td>
-                  <td>task_state</td>
-                  <td>due_date</td>
-                </tr>
+                <?php foreach($task as $task) { ?>
+                  <tr class='clickable-row' data-href="<?php echo url_for('tasks/detail.php?task_id=' . $task->id); ?>">
+                    <td><?php echo $task->task_name; ?></td>
+                    <td><?php echo $task->task_type; ?></td>
+                    <td><?php echo $task->task_status; ?></td>
+                    <td><?php echo $task->task_due_date; ?></td>
+                  </tr>
+                <?php } ?>
             </tbody>
             </table>
           </div><!-- .table-responsive -->

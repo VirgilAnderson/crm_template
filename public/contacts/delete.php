@@ -3,6 +3,26 @@
   // Ensure User Logged In
   require_login();
 
+  // Get contact_id if set
+  $contact_id = $_GET['contact_id'] ?? false;
+
+  // If contact_id is set, query db
+  if($contact_id) {
+    // Query db for contact record
+    $contact = Contact::find_by_id($contact_id);
+  } else {
+    // if !$contact_id, redirect to contacts/index.php
+    redirect_to(url_for('contacts/index.php'));
+  }
+
+  // If post request, process the form
+  if(is_post_request()) {
+    // Delete
+    $result = $contact->delete();
+    $session->message('The contact was successfully deleted.');
+    redirect_to(url_for('/contacts/index.php'));
+  }
+
 ?>
 
 <?php $page_title = "Delete Contact"; ?>
@@ -27,17 +47,17 @@
         </div><!-- .card-header -->
         <div class="card-body">
           <p>Are you sure you want to delete?</p>
-          <p>First Name</p>
+          <h4><?php echo $contact->full_name(); ?></h4>
           <form class="col-sm-6" action="" method="post">
-            <fieldset class="form-group">
+            <fieldset class="form-group mt-3">
               <button class="btn btn-outline-info" type="submit"><i class="far fa-trash-alt"></i> Delete</button>
             </fieldset><!-- fieldset -->
           </form>
         </div><!-- .card-body -->
         <div class="card-footer">
           <div class='btn-group'>
-            <a href='<?php echo url_for('contacts/detail.php'); ?>' class="btn btn-outline-info"><i class="fas fa-info-circle"></i> Contact Detail</a>
-            <a href='<?php echo url_for('contacts/edit.php'); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Contact</a>
+            <a href='<?php echo url_for('contacts/detail.php?contact_id=' . $contact_id); ?>' class="btn btn-outline-info"><i class="fas fa-info-circle"></i> Contact Detail</a>
+            <a href='<?php echo url_for('contacts/edit.php?contact_id=' . $contact_id); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Contact</a>
           </div><!-- .btn-group -->
         </div><!-- .card-footer -->
       </div><!-- .card -->
