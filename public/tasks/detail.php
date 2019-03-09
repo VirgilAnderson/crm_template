@@ -3,6 +3,41 @@
   // Ensure User Logged In
   require_login();
 
+  // Get task id, if not set redirect to tasks/index.php
+  $task_id = $_GET['task_id'] ?? false;
+  if(!$task_id) {
+    redirect_to(url_for('tasks/index.php'));
+  }
+
+  // Search for task by id
+  $task = Task::find_by_id($task_id);
+
+  // Search for contacts
+  if($task->contact_id) {
+    $sql = 'SELECT * FROM contact ';
+    $sql .= "WHERE id=" . $task->contact_id;
+    $contact = Contact::find_by_sql($sql);
+  }
+
+  // Search for company
+  if($task->company_id){
+    $sql = 'SELECT * FROM company ';
+    $sql .= "WHERE id=" . $task->company_id;
+    $company = Company::find_by_sql($sql);
+  } else {
+    $company = [];
+  }
+
+  // Search for project
+  if($task->project_id){
+    $sql = 'SELECT * FROM company ';
+    $sql .= "WHERE id=" . $task->project_id;
+    $project = Company::find_by_sql($sql);
+  } else {
+    $project = [];
+  }
+
+
 ?>
 
 <?php $page_title = "Task Details"; ?>
