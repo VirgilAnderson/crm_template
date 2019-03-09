@@ -22,6 +22,11 @@
   $user_id = $contact->user_id;
   $user = User::find_by_id($user_id);
 
+  // Search for the contact's tasks
+  $sql = 'SELECT * FROM task ';
+  $sql .= "WHERE contact_id=" . $contact->id;
+  $task = Task::find_by_sql($sql);
+
 ?>
 
 <?php $page_title = "Contact Details"; ?>

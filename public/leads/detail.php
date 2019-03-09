@@ -16,6 +16,11 @@
   $user_id = $lead->user_id;
   $user = User::find_by_id($user_id);
 
+  // Search for lead's tasks
+  $sql = 'SELECT * FROM task ';
+  $sql .= "WHERE lead_id=" . $lead->id;
+  $task = Task::find_by_sql($sql);
+
 ?>
 
 <?php $page_title = "Lead Details"; ?>
