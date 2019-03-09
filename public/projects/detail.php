@@ -25,6 +25,11 @@
   $sql .= $project_id;
   $contact = Contact::find_by_sql($sql);
 
+  // Search for the project's tasks
+  $sql = 'SELECT * FROM task ';
+  $sql .= "WHERE project_id=" . $project->id;
+  $task = Task::find_by_sql($sql);
+
 ?>
 
 <?php $page_title = "Project Details"; ?>

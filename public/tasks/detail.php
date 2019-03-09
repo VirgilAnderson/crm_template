@@ -37,6 +37,15 @@
     $project = [];
   }
 
+  // Search for lead
+  if($task->lead_id){
+    $sql = 'SELECT * FROM lead ';
+    $sql .= "WHERE id=" . $task->lead_id;
+    $lead = Lead::find_by_sql($sql);
+  } else {
+    $lead = [];
+  }
+
 
 ?>
 
