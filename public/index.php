@@ -49,7 +49,6 @@
                 <tr class='clickable-row' data-href="">
                   <th></th>
                   <th>Title</th>
-                  <th>Task Type</th>
                   <th>Status</th>
                   <th>Due Date</th>
                 </tr>
@@ -59,7 +58,6 @@
                   <tr class='clickable-row' data-href="<?php echo url_for('tasks/detail.php?task_id=' . $task->id); ?>">
                     <td><span class="badge badge-warning">Due Today</span></td>
                     <td><?php echo $task->task_name; ?></td>
-                    <td><?php echo $task->task_type; ?></td>
                     <td><?php echo $task->task_status; ?></td>
                     <td><?php echo $task->task_due_date; ?></td>
                   </tr>

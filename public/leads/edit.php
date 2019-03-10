@@ -3,11 +3,6 @@
   // Ensure User Logged In
   require_login();
 
-  // Find all user query
-  $sql = "SELECT * FROM user ";
-  $sql .= "ORDER BY id DESC";
-  $user = User::find_by_sql($sql);
-
   // Get lead_id if set
   $lead_id = $_GET['lead_id'] ?? false;
 
@@ -19,6 +14,11 @@
     // If not set, redirect to leads page
     redirect_to(url_for('leads/index.php'));
   }
+
+  // Find all user query
+  $sql = "SELECT * FROM user ";
+  $sql .= "ORDER BY id DESC";
+  $user = User::find_by_sql($sql);
 
   // If post request, process the form
   if(is_post_request()) {

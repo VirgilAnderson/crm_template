@@ -97,8 +97,8 @@
         <div class="card-footer">
           <div class='btn-group'>
             <a href='<?php echo url_for('tasks/new.php'); ?>' class="btn btn-outline-info"><i class="far fa-plus-square"></i> New Task</a>
-            <a href='<?php echo url_for('tasks/delete.php'); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Task</a>
-            <a href='<?php echo url_for('tasks/edit.php'); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Task</a>
+            <a href='<?php echo url_for('tasks/delete.php?task_id=' . $task_id); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Task</a>
+            <a href='<?php echo url_for('tasks/edit.php?task_id=' . $task_id); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Task</a>
           </div><!-- .btn-group -->
         </div><!-- .card-footer -->
       </div><!-- .card -->

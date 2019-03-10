@@ -3,6 +3,18 @@
   // Ensure User Logged In
   require_login();
 
+  // Get Task ID if set
+  $task_id = $_GET['task_id'] ?? false;
+
+  // If task_id is set, then query the db
+  if($task_id) {
+    // Search for task by id
+    $task = Task::find_by_id($task_id);
+  } else {
+    // If not set, redirect to tasks page
+    redirect_to(url_for('tasks/index.php'));
+  }
+
 ?>
 
 <?php $page_title = "Edit Task"; ?>
