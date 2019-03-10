@@ -19,14 +19,8 @@
     $contact = Contact::find_by_sql($sql);
   }
 
-  // Search for company
-  if($task->company_id){
-    $sql = 'SELECT * FROM company ';
-    $sql .= "WHERE id=" . $task->company_id;
-    $company = Company::find_by_sql($sql);
-  } else {
-    $company = [];
-  }
+  // Search for company by id
+  $company = Company::find_by_id($task->company_id);
 
   // Search for project
   if($task->project_id){
