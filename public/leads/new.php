@@ -19,7 +19,7 @@
     if($result === true){
       $new_id = $lead->id;
       // Add session message
-      $session->message('User was created successfully');
+      $session->message('Lead was created successfully');
       redirect_to(url_for('leads/detail.php?lead_id=' . $new_id));
     } else {
       echo 'error';
