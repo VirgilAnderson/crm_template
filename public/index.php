@@ -88,20 +88,18 @@
         </div><!-- .card-footer -->
       </div><!-- .card -->
     </div><!-- .container col-sm-6 -->
+
     <div class="container col-sm-6 mb-4">
-
-
       <!-- Leads -->
       <div class="card">
         <div class="card-header">
           <a href="<?php echo url_for('leads/index.php'); ?>" class="text-info"><h2><i class="fas fa-dollar-sign"></i> Leads</h2></a>
         </div><!-- .card-header -->
-
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered table-hover table-sm">
               <thead class='thead-light'>
-                <tr>
+                <tr class='clickable-row' data-href="">
                   <th></th>
                   <th>First Name</th>
                   <th>Last Name</th>
@@ -116,8 +114,8 @@
                   <td><?php echo $lead->lead_last_name; ?></td>
                   <td><?php echo $lead->lead_source; ?></td>
                 </tr>
-              </tbody>
               <?php } ?>
+              </tbody>
             </table>
             <ul class="pagination pagination-sm justify-content-center">
               <li class="page-item">
