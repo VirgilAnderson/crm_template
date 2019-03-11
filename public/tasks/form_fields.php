@@ -34,7 +34,6 @@
 <div class="form-group">
   <label for="task[company_id]">Company:</label>
     <select class="form-control" name="task[company_id]">
-      <option value=''>None</option>
       <?php foreach($company as $company) { ?>
         <option value='<?php echo $company->id; ?>'><?php echo $company->company_name; ?></option>
       <?php } ?>
@@ -44,7 +43,6 @@
 <div class="form-group">
   <label for="task[project_id]">Project:</label>
     <select class="form-control" name="task[project_id]">
-      <option value=''>None</option>
         <?php foreach($project as $project) {?>
           <option value='<?php echo $project->id; ?>'><?php echo $project->project_name; ?></option>
         <?php  } ?>
@@ -54,7 +52,6 @@
 <div class="form-group">
   <label for="task[contact_id]">Contact</label>
     <select class="form-control" name="task[contact_id]">
-      <option value=''>None</option>
       <?php foreach($contact as $contact) { ?>
         <option value="<?php echo $contact->id; ?>" ><?php echo $contact->full_name(); ?></option>
       <?php } ?>
@@ -64,7 +61,6 @@
 <div class="form-group">
   <label for="task[lead_id]">Lead</label>
     <select class="form-control" name="task[lead_id]">
-      <option value=''>None</option>
       <?php foreach($lead as $lead) { ?>
         <option value="<?php echo $lead->id; ?>" ><?php echo $lead->full_name(); ?></option>
       <?php } ?>
@@ -74,7 +70,6 @@
 <div class="form-group">
   <label for="task[user_id]">Task Owner</label>
     <select class="form-control" name="task[user_id]">
-      <option value=''>None</option>
       <?php foreach($user as $user ) {?>
         <option value="<?php echo $user->id; ?>" ><?php echo $user->user_username; ?></option>
       <?php } ?>

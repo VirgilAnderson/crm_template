@@ -2,39 +2,32 @@
 <?php
   // Ensure User Logged In
   require_login();
-
   // Find all user query
   $sql = "SELECT * FROM user ";
   $sql .= "ORDER BY id DESC";
   $user = User::find_by_sql($sql);
-
   // Find all companies query
   $sql = "SELECT * FROM company ";
   $sql .= "ORDER BY id DESC";
   $company = Company::find_by_sql($sql);
-
   // Find all contacts query
   $sql = "SELECT * FROM contact ";
   $sql .= "ORDER BY id DESC";
   $contact = Contact::find_by_sql($sql);
-
   // Find all leads query
   $sql = "SELECT * FROM lead ";
   $sql .= "ORDER BY id DESC";
   $lead = Lead::find_by_sql($sql);
-
   // Find all projects query
   $sql = "SELECT * FROM project ";
   $sql .= "ORDER BY id DESC";
   $project = Project::find_by_sql($sql);
-
   // If Post Request Process form
   if(is_post_request()) {
     // Get input data
     $args = $_POST['task'];
     $task = new Task($args);
     $result = $task->save();
-
     // Verify success
     if($result === true){
       $new_id = $task->id;
@@ -44,12 +37,10 @@
     } else {
       echo 'error';
     }
-
   } else {
     // Display blank Form
     $task = new Task;
   }
-
 ?>
 
 <?php $page_title = "New task"; ?>
