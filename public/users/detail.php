@@ -36,6 +36,8 @@
 
     <!-- Lead Card -->
     <div class="container col-12 mb-4">
+      <!-- Messages -->
+      <?php echo display_session_message(); ?>
       <div class="card">
         <div class="card-header text-secondary">
           <h2><i class="fas fa-info-circle"></i> <?php echo $user->full_name(); ?> Details</h2>

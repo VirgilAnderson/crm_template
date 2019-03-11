@@ -15,6 +15,47 @@
     redirect_to(url_for('tasks/index.php'));
   }
 
+  // Find all user query
+  $sql = "SELECT * FROM user ";
+  $sql .= "ORDER BY id DESC";
+  $user = User::find_by_sql($sql);
+
+  // Find all companies query
+  $sql = "SELECT * FROM company ";
+  $sql .= "ORDER BY id DESC";
+  $company = Company::find_by_sql($sql);
+
+  // Find all contacts query
+  $sql = "SELECT * FROM contact ";
+  $sql .= "ORDER BY id DESC";
+  $contact = Contact::find_by_sql($sql);
+
+  // Find all leads query
+  $sql = "SELECT * FROM lead ";
+  $sql .= "ORDER BY id DESC";
+  $lead = Lead::find_by_sql($sql);
+
+  // Find all projects query
+  $sql = "SELECT * FROM project ";
+  $sql .= "ORDER BY id DESC";
+  $project = Project::find_by_sql($sql);
+
+  // If post request, process the form
+  if(is_post_request()) {
+    // Edit record using post data
+    $args = $_POST['task'];
+    $task->merge_attributes($args);
+    $result = $task->save();
+
+    if($result === true) {
+      $session->message('The task was updated successfully.');
+      redirect_to(url_for('/tasks/detail.php?task_id=' . $task_id));
+    } else {
+      // show errors
+
+    }
+  }
+
 ?>
 
 <?php $page_title = "Edit Task"; ?>
@@ -25,7 +66,7 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="<?php echo url_for('index.php'); ?>"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
     <li class="breadcrumb-item"><a href="<?php echo url_for('tasks/index.php'); ?>"><i class="fas fa-thumbtack"></i> Tasks</a></li>
-    <li class="breadcrumb-item"><a href=""><i class="fas fa-info-circle"></i> Task Detail</a></li>
+    <li class="breadcrumb-item"><a href="<?php echo url_for('tasks/detail.php?task_id=' . $task_id); ?>"><i class="fas fa-info-circle"></i> Task Detail</a></li>
     <li class="breadcrumb-item active"><i class="far fa-edit"></i> Edit Task</li>
   </ol>
 

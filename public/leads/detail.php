@@ -39,13 +39,19 @@
 <div class='container'>
   <div class="row">
 
+
+
     <!-- Lead Card -->
     <div class="container col-12 mb-4">
-      <div class="card">
+      <!-- Messages -->
+      <?php echo display_session_message(); ?>
 
+      <div class="card">  
         <!-- Card Header -->
         <div class="card-header text-secondary">
           <h2><i class="fas fa-info-circle"></i> Lead Details</h2>
+
+
         </div><!-- .card-header -->
         <div class="card-body">
           <div class="row">

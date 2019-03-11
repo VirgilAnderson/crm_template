@@ -47,6 +47,8 @@
 
     <!-- Contact Card -->
     <div class="container col-12 mb-4">
+      <!-- Messages -->
+      <?php echo display_session_message(); ?>
       <div class="card">
 
         <!-- Card Header -->

@@ -2,6 +2,13 @@
 <?php
   // Ensure User Logged In
   require_login();
+
+  // Get user by session
+  $user_id = $session->user_id;
+
+  // Get User account by id
+  $user = User::find_by_id($user_id);
+
 ?>
 
 <?php $page_title = "Account"; ?>
@@ -18,6 +25,9 @@
 <!-- main container -->
 <div class='container'>
     <div class="container col-12 mb-4">
+      <!-- Messages -->
+      <?php echo display_session_message(); ?>
+      
       <div class="card">
         <div class="card-header text-secondary">
           <h2><i class="fas fa-user-circle"></i> Account</h2>
@@ -26,29 +36,29 @@
           <ul class="list-group">
           <dl class="list-group-item d-flex">
             <dt class="mr-4">First Name</dt>
-            <dd>First_name</dd>
+            <dd><?php echo $user->user_first_name; ?></dd>
           </dl>
           <dl class="list-group-item d-flex">
             <dt class="mr-4">Last Name</dt>
-            <dd>Last_name</dd>
+            <dd><?php echo $user->user_last_name; ?></dd>
           </dl>
           <dl class="list-group-item d-flex">
             <dt class="mr-4">Role</dt>
-            <dd>Role</dd>
+            <dd><?php echo $user->user_role; ?></dd>
           </dl>
           <dl class="list-group-item d-flex">
             <dt class="mr-4">Email</dt>
-            <dd>Email_address</dd>
+            <dd><?php echo $user->user_email; ?></dd>
           </dl>
           <dl class="list-group-item d-flex">
             <dt class="mr-4">Username</dt>
-            <dd>Username</dd>
+            <dd><?php echo $user->user_username; ?></dd>
           </dl>
         </div><!-- .card-body -->
         <div class="card-footer">
           <div class='btn-group'>
             <a href='<?php echo url_for('account/delete.php'); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Account</a>
-            <a href='<?php echo url_for('account/edit.php'); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Account</a>
+            <a href='<?php echo url_for('account/edit.php?user_id=' . $user_id); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Account</a>
           </div><!-- .btn-group -->
         </div><!-- .card-footer -->
       </div><!-- .card -->
