@@ -43,7 +43,7 @@
         </div><!-- .card-header -->
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table table-bordered table-hover table-sm">
+            <table class="table table-bordered table-striped table-hover table-sm">
               <thead class='thead-light'>
                 <tr>
                   <th></th>
@@ -62,8 +62,8 @@
                   <td><?php echo $contact->contact_title; ?></td>
                   <td><?php echo $contact->contact_lead_source; ?></td>
                 </tr>
-            </tbody>
                 <?php } ?>
+              </tbody>
             </table>
           </div><!-- .table-responsive -->
 

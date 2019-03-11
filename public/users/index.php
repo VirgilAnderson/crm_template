@@ -45,7 +45,7 @@
         </div><!-- .card-header -->
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table table-bordered table-hover table-sm">
+            <table class="table table-bordered table-striped table-hover table-sm">
               <thead>
                 <tr class='thead-light'>
                   <th>First Name</th>
@@ -64,8 +64,8 @@
                   <td><?php echo h($user->user_email); ?></td>
                   <td><?php echo h($user->user_username); ?></td>
                 </tr>
-            </tbody>
                 <?php } ?>
+              </tbody>
             </table>
           </div><!-- .table-responsive -->
 

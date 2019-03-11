@@ -41,7 +41,7 @@
         </div><!-- .card-header -->
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table table-bordered table-hover table-sm">
+            <table class="table table-bordered table-striped table-hover table-sm">
               <thead class='thead-light'>
                 <tr>
                   <th>Company</th>
@@ -58,8 +58,8 @@
                   <td><?php echo $company->company_state; ?></td>
                   <td><?php echo $company->company_url; ?></td>
                 </tr>
-            </tbody>
                 <?php } ?>
+              </tbody>
             </table>
           </div><!-- .table-responsive -->
 
