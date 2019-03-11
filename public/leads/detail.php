@@ -21,6 +21,11 @@
   $sql .= "WHERE lead_id=" . $lead->id;
   $task = Task::find_by_sql($sql);
 
+  // Search for the lead's notes
+  $sql = 'SELECT * FROM note ';
+  $sql .= 'WHERE lead_id=' . $lead->id;
+  $note = Note::find_by_sql($sql);
+
 ?>
 
 <?php $page_title = "Lead Details"; ?>
@@ -46,7 +51,7 @@
       <!-- Messages -->
       <?php echo display_session_message(); ?>
 
-      <div class="card">  
+      <div class="card">
         <!-- Card Header -->
         <div class="card-header text-secondary">
           <h2><i class="fas fa-info-circle"></i> Lead Details</h2>

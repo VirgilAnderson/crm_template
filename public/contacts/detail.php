@@ -27,6 +27,11 @@
   $sql .= "WHERE contact_id=" . $contact->id;
   $task = Task::find_by_sql($sql);
 
+  // Search for the contact's notes
+  $sql = 'SELECT * FROM note ';
+  $sql .= 'WHERE contact_id=' . $contact->id;
+  $note = Note::find_by_sql($sql);
+
 ?>
 
 <?php $page_title = "Contact Details"; ?>

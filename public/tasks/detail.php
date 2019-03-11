@@ -40,6 +40,10 @@
     $lead = [];
   }
 
+  // Search for the company's notes
+  $sql = 'SELECT * FROM note ';
+  $sql .= 'WHERE task_id=' . $task->id;
+  $note = Note::find_by_sql($sql);
 
 ?>
 

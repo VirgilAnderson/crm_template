@@ -30,6 +30,11 @@
   $sql .= "WHERE company_id=" . $company->id;
   $task = Task::find_by_sql($sql);
 
+  // Search for the company's notes
+  $sql = 'SELECT * FROM note ';
+  $sql .= 'WHERE company_id=' . $company->id;
+  $note = Note::find_by_sql($sql);
+
 ?>
 
 <?php $page_title = "Company Details"; ?>

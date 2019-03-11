@@ -30,6 +30,11 @@
   $sql .= "WHERE project_id=" . $project->id;
   $task = Task::find_by_sql($sql);
 
+  // Search for the project's notes
+  $sql = 'SELECT * FROM note ';
+  $sql .= 'WHERE project_id=' . $project->id;
+  $note = Note::find_by_sql($sql);
+
 ?>
 
 <?php $page_title = "Project Details"; ?>
