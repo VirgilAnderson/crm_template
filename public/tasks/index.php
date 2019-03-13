@@ -31,16 +31,16 @@
             <div class='col-sm'>
               <h2><i class="fas fa-thumbtack"></i> Tasks</h2>
             </div><!-- .col -->
-            <div class='col-sm'>
-              <!-- Search Form -->
-              <form class="form-inline my-2 my-sm-0 d-flex justify-content-end">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search Tasks...">
-                <button class="btn btn-outline-dark my-2 my-sm-0" type="button"><i class="fas fa-search"></i></button>
-              </form>
-            </div><!-- .col-sm -->
           </div><!-- .row -->
         </div><!-- .card-header -->
         <div class="card-body">
+          <div class='col-sm mb-3'>
+            <!-- Search Form -->
+            <form class="form-inline my-2 my-sm-0 d-flex justify-content-end">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search Tasks...">
+              <button class="btn btn-outline-dark my-2 my-sm-0" type="button"><i class="fas fa-search"></i></button>
+            </form>
+          </div><!-- .col-sm -->
           <div class="table-responsive">
             <table class="table table-bordered table-striped table-hover table-sm">
               <thead class='thead-light'>
