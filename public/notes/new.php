@@ -24,7 +24,7 @@
       redirect_to(url_for('notes/detail.php?note_id=' . $new_id));
     } else {
       echo 'error <br>';
-      foreach($note as $arg => $arg_value){
+      foreach($args as $arg => $arg_value){
         echo $arg . ': ' . $arg_value . '<br>';
       }
     }

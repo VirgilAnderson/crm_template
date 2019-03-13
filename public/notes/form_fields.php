@@ -30,7 +30,7 @@
         <label for="note[contact_id]">Contact:</label>
             <select class="form-control" name="note[contact_id]">
               <?php foreach($contact as $contact) { ?>
-                <option value='<?php echo $contact->id; ?>' <?php if($note->contact_id == $contact->id) { echo 'selected'; } ?>><?php echo $contact->full_name(); ?></option>
+                <option value='<?php echo $contact->id; ?>' <?php if($note->contact_id == $contact->id || $contact->id == $contact_id) { echo 'selected'; } ?>><?php echo $contact->full_name(); ?></option>
               <?php } ?>
             </select>
       </div><!-- form-group -->

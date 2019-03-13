@@ -32,6 +32,9 @@
   $sql .= 'WHERE contact_id=' . $contact->id;
   $note = Note::find_by_sql($sql);
 
+  // Set Links
+  $link = Note::echo_link_set();
+
 ?>
 
 <?php $page_title = "Contact Details"; ?>

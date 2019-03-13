@@ -43,6 +43,13 @@
           <a href="<?php echo url_for('tasks/index.php'); ?>" class="text-info"><h2><i class="fas fa-thumbtack"></i> Tasks</h2></a>
         </div><!-- .card-header -->
         <div class="card-body">
+          <div class='col-sm mb-3'>
+            <!-- Search Form -->
+            <form class="form-inline my-2 my-sm-0 d-flex justify-content-end">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search Tasks...">
+              <button class="btn btn-outline-dark my-2 my-sm-0" type="button"><i class="fas fa-search"></i></button>
+            </form>
+          </div><!-- .col -->
           <div class="table-responsive">
             <table class="table table-bordered table-striped table-hover table-sm">
               <thead class='thead-light'>
@@ -96,6 +103,13 @@
           <a href="<?php echo url_for('leads/index.php'); ?>" class="text-info"><h2><i class="fas fa-dollar-sign"></i> Leads</h2></a>
         </div><!-- .card-header -->
         <div class="card-body">
+          <div class='col-sm mb-3'>
+            <!-- Search Form -->
+            <form class="form-inline my-2 my-sm-0 d-flex justify-content-end">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search Leads...">
+              <button class="btn btn-outline-dark my-2 my-sm-0" type="button"><i class="fas fa-search"></i></button>
+            </form>
+          </div><!-- .col -->
           <div class="table-responsive">
             <table class="table table-bordered table-striped table-hover table-sm">
               <thead class='thead-light'>
@@ -152,6 +166,13 @@
           <h2><a href='<?php echo url_for('projects/index.php'); ?>' class="text-info"><i class="fas fa-project-diagram"></i> Projects</a></h2>
         </div><!-- .card-header -->
         <div class="card-body">
+          <div class='col-sm mb-3'>
+            <!-- Search Form -->
+            <form class="form-inline my-2 my-sm-0 d-flex justify-content-end">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search Projects...">
+              <button class="btn btn-outline-dark my-2 my-sm-0" type="button"><i class="fas fa-search"></i></button>
+            </form>
+          </div><!-- .col -->
           <div class="table-responsive">
             <table class="table table-bordered table-striped table-hover table-sm">
               <thead class='thead-light'>

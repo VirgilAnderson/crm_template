@@ -46,7 +46,7 @@
 <div class="container" style="margin-top:20px">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="<?php echo url_for('index.php'); ?>"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-    <li class="breadcrumb-item"><a href=""><i class="fas fa-info-circle"></i> Note Details</a></li>
+    <li class="breadcrumb-item"><a href="<?php echo url_for('notes/detail.php?note_id=' . $note_id); ?>"><i class="fas fa-info-circle"></i> Note Details</a></li>
     <li class="breadcrumb-item active"><i class="far fa-edit"></i> Edit Note</li>
   </ol>
 
