@@ -3,59 +3,65 @@
   // Ensure User Logged In
   require_login();
 
-  // Get task id, if not set redirect to tasks/index.php
-  $task_id = $_GET['task_id'] ?? false;
-  if(!$task_id) {
-    redirect_to(url_for('tasks/index.php'));
+  // Get note id, if not set redirect to notes/index.php
+  $note_id = $_GET['note_id'] ?? false;
+  if(!$note_id) {
+    redirect_to(url_for('notes/index.php'));
   }
 
-  // Search for task by id
-  $task = Task::find_by_id($task_id);
+  // Search for note by id
+  $note = Note::find_by_id($note_id);
 
   // Search for contacts
-  if($task->contact_id) {
+  if($note->contact_id) {
     $sql = 'SELECT * FROM contact ';
-    $sql .= "WHERE id=" . $task->contact_id;
+    $sql .= "WHERE id=" . $note->contact_id;
     $contact = Contact::find_by_sql($sql);
+  } else {
+    $contact = [];
   }
 
   // Search for company by id
-  $company = Company::find_by_id($task->company_id);
+  $company = Company::find_by_id($note->company_id);
 
   // Search for project
-  if($task->project_id){
+  if($note->project_id){
     $sql = 'SELECT * FROM company ';
-    $sql .= "WHERE id=" . $task->project_id;
+    $sql .= "WHERE id=" . $note->project_id;
     $project = Company::find_by_sql($sql);
   } else {
     $project = [];
   }
 
   // Search for lead
-  if($task->lead_id){
+  if($note->lead_id){
     $sql = 'SELECT * FROM lead ';
-    $sql .= "WHERE id=" . $task->lead_id;
+    $sql .= "WHERE id=" . $note->lead_id;
     $lead = Lead::find_by_sql($sql);
   } else {
     $lead = [];
   }
 
-  // Search for the company's notes
-  $sql = 'SELECT * FROM note ';
-  $sql .= 'WHERE task_id=' . $task->id;
-  $note = Note::find_by_sql($sql);
+  // Search for task
+  if($note->task_id){
+    $sql = 'SELECT * FROM task ';
+    $sql .= "WHERE id=" . $note->task_id;
+    $task = Task::find_by_sql($sql);
+  } else {
+    $task = [];
+  }
+
 
 ?>
 
-<?php $page_title = "Task Details"; ?>
+<?php $page_title = "Note Details"; ?>
 <?php include('../../private/shared/header.php'); ?>
 
 <!-- breadcrumbs -->
 <div class="container" style="margin-top:20px">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="<?php echo url_for('index.php'); ?>"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-    <li class="breadcrumb-item"><a href="<?php echo url_for('tasks/index.php'); ?>"><i class="fas fa-thumbtack"></i> Tasks</a></li>
-    <li class="breadcrumb-item active"><i class="fas fa-info-circle"></i> Task Detail</li>
+    <li class="breadcrumb-item active"><i class="fas fa-info-circle"></i> Note Detail</li>
   </ol>
 </div><!-- .container mt-4 -->
 
@@ -71,13 +77,13 @@
 
         <!-- Card Header -->
         <div class="card-header text-secondary">
-          <h2><i class="fas fa-info-circle"></i> Task Details</h2>
+          <h2><i class="fas fa-info-circle"></i> Note Details</h2>
         </div><!-- .card-header -->
         <div class="card-body">
           <div class="row">
             <div class="col-sm-5">
               <!-- Main section Leads -->
-              <?php include('detail_section/task_detail.php'); ?>
+              <?php include('detail_section/note_detail.php'); ?>
             </div><!-- .col-sm-5  -->
 
             <!-- Group Pane Section -->
@@ -86,7 +92,7 @@
                 <div class="card-header">
 
                   <!-- Group Pane Tabs -->
-                  <?php $selected = 'tasks'; ?>
+                  <?php $selected = 'note'; ?>
                   <?php include('../../private/shared/detail_panes/group_tabs.php'); ?>
                 </div><!-- .card-header -->
 
@@ -102,9 +108,9 @@
         </div><!-- .card-body -->
         <div class="card-footer">
           <div class='btn-group'>
-            <a href='<?php echo url_for('tasks/new.php'); ?>' class="btn btn-outline-info"><i class="far fa-plus-square"></i> New Task</a>
-            <a href='<?php echo url_for('tasks/delete.php?task_id=' . $task_id); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Task</a>
-            <a href='<?php echo url_for('tasks/edit.php?task_id=' . $task_id); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Task</a>
+            <a href='<?php echo url_for('notes/new.php'); ?>' class="btn btn-outline-info"><i class="far fa-plus-square"></i> New Note</a>
+            <a href='<?php echo url_for('notes/delete.php?note_id=' . $note_id); ?>' class="btn btn-outline-info"><i class="far fa-trash-alt"></i> Delete Note</a>
+            <a href='<?php echo url_for('notes/edit.php?note_id=' . $note_id); ?>' class="btn btn-outline-info"><i class="far fa-edit"></i> Edit Note</a>
           </div><!-- .btn-group -->
         </div><!-- .card-footer -->
       </div><!-- .card -->
