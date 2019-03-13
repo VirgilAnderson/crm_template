@@ -22,22 +22,23 @@
   }
 
   // Search for company by id
-  $company = Company::find_by_id($note->company_id);
+  if($note->company_id) {
+      $company = Company::find_by_id($note->company_id);
+  } else {
+    $company = [];
+  }
+
 
   // Search for project
-  if($note->project_id){
-    $sql = 'SELECT * FROM company ';
-    $sql .= "WHERE id=" . $note->project_id;
-    $project = Company::find_by_sql($sql);
+  if($note->project_id) {
+    $project = Project::find_by_id($note->project_id);
   } else {
     $project = [];
   }
 
   // Search for lead
   if($note->lead_id){
-    $sql = 'SELECT * FROM lead ';
-    $sql .= "WHERE id=" . $note->lead_id;
-    $lead = Lead::find_by_sql($sql);
+    $lead = Lead::find_by_id($note->lead_id);
   } else {
     $lead = [];
   }
