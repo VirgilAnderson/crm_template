@@ -3,6 +3,8 @@
   // Ensure User Logged In
   require_login();
 
+
+
   // Get all Set Id's
   include('../../private/shared/queries/get_set_ids.php');
 
@@ -10,23 +12,29 @@
   if($note_id) {
     // Query Note by Id
     $note = Note::find_by_id($note_id);
+
+    // Find all queries
+    include('../../private/shared/queries/find_all.php');
+
   } else {
     redirect_to(url_for('notes/index.php'));
   }
 
-  // Find all queries
-  include('../../private/shared/queries/find_all.php');
+  // If post request, process the form
+  if(is_post_request()) {
+    // Edit record using post data
+    $args = $_POST['note'];
+    $note->merge_attributes($args);
+    $result = $note->save();
 
-  // Find linked records
-  // Linked Company
+    if($result === true) {
+      $session->message('The note was updated successfully.');
+      redirect_to(url_for('/notes/detail.php?note_id=' . $note_id));
+    } else {
+      // show errors
 
-  // Linked lead
-
-  // Linked Contact
-
-  // Linked Project
-
-  // Linked Task 
+    }
+  }
 
 
 ?>
@@ -42,7 +50,7 @@
     <li class="breadcrumb-item active"><i class="far fa-edit"></i> Edit Note</li>
   </ol>
 
-  <form class="col-sm-6" action="" method="post">
+  <form class="col-sm-6" action="<?php ?>" method="post">
       <h2><i class="far fa-edit"></i> Edit Note</h2>
       <fieldset class="form-group">
         <legend>Note Information</legend>
