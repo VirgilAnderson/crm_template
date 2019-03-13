@@ -4,41 +4,10 @@
   require_login();
 
   // Find all user query
-  $sql = "SELECT * FROM user ";
-  $sql .= "ORDER BY id DESC";
-  $user = User::find_by_sql($sql);
+  include('../../private/shared/queries/find_all.php');
 
-  // Find all companies query
-  $sql = "SELECT * FROM company ";
-  $sql .= "ORDER BY id DESC";
-  $company = Company::find_by_sql($sql);
-
-  // Find all contacts query
-  $sql = "SELECT * FROM contact ";
-  $sql .= "ORDER BY id DESC";
-  $contact = Contact::find_by_sql($sql);
-
-  // Find all leads query
-  $sql = "SELECT * FROM lead ";
-  $sql .= "ORDER BY id DESC";
-  $lead = Lead::find_by_sql($sql);
-
-  // Find all projects query
-  $sql = "SELECT * FROM project ";
-  $sql .= "ORDER BY id DESC";
-  $project = Project::find_by_sql($sql);
-
-  // Find all tasks query
-  $sql = "SELECT * FROM task ";
-  $sql .= "ORDER BY id DESC";
-  $task = Task::find_by_sql($sql);
-
-  // Get Set Id's
-  $company_id = $_GET['company_id'] ?? false;
-  $contact_id = $_GET['contact_id'] ?? false;
-  $lead_id = $_GET['lead_id'] ?? false;
-  $project_id = $_GET['project_id'] ?? false;
-  $task_id = $_GET['task_id'] ?? false;
+  // Get all Set Id's
+  include('../../private/shared/queries/get_set_ids.php');
 
   // If Post Request Process form
   if(is_post_request()) {
