@@ -1,11 +1,11 @@
       <div class="form-group">
         <label class="form-control-label" for="note[note_name]">Note Name</label>
-        <input class="form-control" type="text" name="note[note_name]" >
+        <input class="form-control" type="text" name="note[note_name]" value='<?php echo $note->note_name; ?>'>
       </div><!-- form-group -->
 
       <div class="form-group">
         <label for="note[note_description]">Note Description:</label>
-        <textarea class="form-control" rows="5" name="note[note_description]"></textarea>
+        <textarea class="form-control" rows="5" name="note[note_description]"><?php echo $note->note_description; ?></textarea>
       </div><!-- form-group -->
 
       <div class="form-group">

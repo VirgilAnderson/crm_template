@@ -8,37 +8,15 @@
 
   // If task_id is set, then query the db
   if($task_id) {
+    // Find all queries
+    include('../../private/shared/queries/find_all.php');
+
     // Search for task by id
     $task = Task::find_by_id($task_id);
   } else {
     // If not set, redirect to tasks page
     redirect_to(url_for('tasks/index.php'));
   }
-
-  // Find all user query
-  $sql = "SELECT * FROM user ";
-  $sql .= "ORDER BY id DESC";
-  $user = User::find_by_sql($sql);
-
-  // Find all companies query
-  $sql = "SELECT * FROM company ";
-  $sql .= "ORDER BY id DESC";
-  $company = Company::find_by_sql($sql);
-
-  // Find all contacts query
-  $sql = "SELECT * FROM contact ";
-  $sql .= "ORDER BY id DESC";
-  $contact = Contact::find_by_sql($sql);
-
-  // Find all leads query
-  $sql = "SELECT * FROM lead ";
-  $sql .= "ORDER BY id DESC";
-  $lead = Lead::find_by_sql($sql);
-
-  // Find all projects query
-  $sql = "SELECT * FROM project ";
-  $sql .= "ORDER BY id DESC";
-  $project = Project::find_by_sql($sql);
 
   // If post request, process the form
   if(is_post_request()) {

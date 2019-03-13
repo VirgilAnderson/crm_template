@@ -3,6 +3,32 @@
   // Ensure User Logged In
   require_login();
 
+  // Get all Set Id's
+  include('../../private/shared/queries/get_set_ids.php');
+
+  // If $_GET['note'] query note details else redirect
+  if($note_id) {
+    // Query Note by Id
+    $note = Note::find_by_id($note_id);
+  } else {
+    redirect_to(url_for('notes/index.php'));
+  }
+
+  // Find all queries
+  include('../../private/shared/queries/find_all.php');
+
+  // Find linked records
+  // Linked Company
+
+  // Linked lead
+
+  // Linked Contact
+
+  // Linked Project
+
+  // Linked Task 
+
+
 ?>
 
 <?php $page_title = "Edit Note"; ?>
