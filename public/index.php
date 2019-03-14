@@ -117,7 +117,7 @@
 
     <div class="container col-sm-6 mb-4">
       <!-- Leads -->
-      <div class="card">
+      <div class="card" id="leads">
         <div class="card-header">
           <a href="<?php echo url_for('leads/index.php'); ?>" class="text-info"><h2><i class="fas fa-dollar-sign"></i> Leads</h2></a>
         </div><!-- .card-header -->

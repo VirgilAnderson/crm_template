@@ -83,8 +83,6 @@
           </div><!-- .table-responsive -->
 
           <!-- pagination -->
-
-
           <?php
             if($total_pages > 1) {
               echo "<ul class=\"pagination pagination-sm justify-content-center\">";
