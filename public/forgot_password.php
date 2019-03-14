@@ -5,7 +5,7 @@
 <!-- breadcrumbs -->
 <div class="container text-center d-flex justify-content-center" style="margin-top:2.5%">
   <div class='col-sm-6 display-1'>
-    <i class="fas fa-skull-crossbones"></i>
+    <i class="fas fa-user-astronaut"></i>
   </div><!-- .col-sm-6 -->
 </div><!-- .container mt-4 -->
 
@@ -28,6 +28,6 @@
         </div>
       </fieldset><!-- fieldset -->
     </form>
-    
+
 </div><!-- .container -->
 <?php include('../private/shared/footer.php'); ?>
