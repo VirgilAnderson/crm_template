@@ -49,7 +49,7 @@
         <div class="card-body">
           <p>Are you sure you want to delete?</p>
           <p><?php echo $task->task_name; ?></p>
-          <form class="col-sm-6" action="" method="post">
+          <form class="col-sm-6" action="<?php echo url_for('tasks/delete.php'); ?>" method="post">
             <fieldset class="form-group">
               <button class="btn btn-outline-info" type="submit"><i class="far fa-trash-alt"></i> Delete</button>
             </fieldset><!-- fieldset -->

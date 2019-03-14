@@ -5,11 +5,28 @@
   // Ensure User Logged In
   require_login();
 
-  // Find all lead query
+  $uid = $session->user_id;
+  $user = User::find_by_id($uid);
+
+  // Lead Pagination
+  $current_page_lead = $_GET['page'] ?? 1;
+  $per_page = 5;
+  $total_count_lead = Lead::count_all_user_leads($uid);
+
+  $pagination_lead = new Pagination($current_page_lead, $per_page, $total_count_lead);
+
+  // Find all open user leads query
   $sql = "SELECT * FROM lead ";
   $sql .= "WHERE user_id=" . $session->user_id;
-  $sql .= " ORDER BY id DESC";
+  $sql .= " AND lead_status!='Closed' ";
+  $sql .= " AND lead_status!='Closed - Disqualified' ";
+  $sql .= " AND lead_status!='Closed - Not Interested' ";
+  $sql .= " ORDER BY id DESC ";
+  $sql .= "LIMIT {$per_page} ";
+  $sql .= "OFFSET {$pagination_lead->offset()} ";
   $lead = Lead::find_by_sql($sql);
+
+  $total_pages = $pagination_lead->total_pages();
 
   // Find all user projects
   $sql = "SELECT * FROM project ";
@@ -43,13 +60,15 @@
           <a href="<?php echo url_for('tasks/index.php'); ?>" class="text-info"><h2><i class="fas fa-thumbtack"></i> Tasks</h2></a>
         </div><!-- .card-header -->
         <div class="card-body">
-          <div class='col-sm mb-3'>
-            <!-- Search Form -->
-            <form class="form-inline my-2 my-sm-0 d-flex justify-content-end">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search Tasks...">
-              <button class="btn btn-outline-dark my-2 my-sm-0" type="button"><i class="fas fa-search"></i></button>
-            </form>
-          </div><!-- .col -->
+          <div class='row'>
+            <div class='col-sm mb-3'>
+              <!-- Search Form -->
+              <form class="form-inline my-2 my-sm-0 d-flex justify-content-end">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search Tasks...">
+                <button class="btn btn-outline-dark my-2 my-sm-0" type="button"><i class="fas fa-search"></i></button>
+              </form>
+            </div><!-- .col -->
+          </div><!-- .row -->
           <div class="table-responsive">
             <table class="table table-bordered table-striped table-hover table-sm">
               <thead class='thead-light'>
@@ -131,23 +150,18 @@
               <?php } ?>
               </tbody>
             </table>
-            <ul class="pagination pagination-sm justify-content-center">
-              <li class="page-item">
-                <a class="page-link" href="#"><i class="fas fa-backward"></i></a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">1</a>
-              </li>
-              <li class="page-item active">
-                <a class="page-link" href="#">2</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">3</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#"><i class="fas fa-forward"></i></a>
-              </li>
-            </ul><!-- .pagination -->
+            <!-- pagination -->
+            <?php
+              if($total_pages > 1) {
+                echo "<ul class=\"pagination pagination-sm justify-content-center\">";
+
+                $url = url_for('index.php');
+                echo $pagination_lead->previous_link($url);
+                echo $pagination_lead->number_links($url);
+                echo $pagination_lead->next_link($url);
+                echo "</ul><!-- .pagination -->";
+              }
+            ?>
           </div><!-- .table-responsive -->
         </div><!-- .card-body -->
         <div class="card-footer">
