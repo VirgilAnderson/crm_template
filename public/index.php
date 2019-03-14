@@ -5,16 +5,6 @@
   // Ensure User Logged In
   require_login();
 
-  $uid = $session->user_id;
-  $user = User::find_by_id($uid);
-
-  // Lead Pagination
-  $current_page_lead = $_GET['page'] ?? 1;
-  $per_page = 5;
-  $total_count_lead = Lead::count_all_user_leads($uid);
-
-  $pagination_lead = new Pagination($current_page_lead, $per_page, $total_count_lead);
-
   // Find all open user leads query
   $sql = "SELECT * FROM lead ";
   $sql .= "WHERE user_id=" . $session->user_id;
@@ -22,22 +12,21 @@
   $sql .= " AND lead_status!='Closed - Disqualified' ";
   $sql .= " AND lead_status!='Closed - Not Interested' ";
   $sql .= " ORDER BY id DESC ";
-  $sql .= "LIMIT {$per_page} ";
-  $sql .= "OFFSET {$pagination_lead->offset()} ";
+  $sql .= "LIMIT 5";
   $lead = Lead::find_by_sql($sql);
-
-  $total_pages = $pagination_lead->total_pages();
 
   // Find all user projects
   $sql = "SELECT * FROM project ";
   $sql .= "WHERE user_id=" . $session->user_id;
-  $sql .= " ORDER BY id DESC";
+  $sql .= " ORDER BY id DESC ";
+  $sql .= "LIMIT 5";
   $project = Project::find_by_sql($sql);
 
   // Find all user tasks query
   $sql = "SELECT * FROM task ";
   $sql .= "WHERE user_id=" . $session->user_id;
-  $sql .= " ORDER BY id DESC";
+  $sql .= " ORDER BY id DESC ";
+  $sql .= "LIMIT 5";
   $task = Task::find_by_sql($sql);
 ?>
 
@@ -76,7 +65,6 @@
                   <th></th>
                   <th>Title</th>
                   <th>Status</th>
-                  <th>Due Date</th>
                 </tr>
               </thead>
               <tbody>
@@ -85,28 +73,11 @@
                     <td><span class="badge badge-warning">Due Today</span></td>
                     <td><?php echo $task->task_name; ?></td>
                     <td><?php echo $task->task_status; ?></td>
-                    <td><?php echo $task->task_due_date; ?></td>
                   </tr>
                 <?php } ?>
               </tbody>
             </table>
-            <ul class="pagination pagination-sm justify-content-center">
-              <li class="page-item">
-                <a class="page-link" href="#"><i class="fas fa-backward"></i></a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">1</a>
-              </li>
-              <li class="page-item active">
-                <a class="page-link" href="#">2</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">3</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#"><i class="fas fa-forward"></i></a>
-              </li>
-            </ul><!-- .pagination -->
+
           </div><!-- .table-responsive -->
         </div><!-- .card-body -->
         <div class="card-footer">
@@ -150,18 +121,7 @@
               <?php } ?>
               </tbody>
             </table>
-            <!-- pagination -->
-            <?php
-              if($total_pages > 1) {
-                echo "<ul class=\"pagination pagination-sm justify-content-center\">";
 
-                $url = url_for('index.php');
-                echo $pagination_lead->previous_link($url);
-                echo $pagination_lead->number_links($url);
-                echo $pagination_lead->next_link($url);
-                echo "</ul><!-- .pagination -->";
-              }
-            ?>
           </div><!-- .table-responsive -->
         </div><!-- .card-body -->
         <div class="card-footer">
@@ -217,23 +177,7 @@
                 <?php } ?>
             </tbody>
             </table>
-            <ul class="pagination pagination-sm justify-content-center">
-              <li class="page-item">
-                <a class="page-link" href="#"><i class="fas fa-backward"></i></a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">1</a>
-              </li>
-              <li class="page-item active">
-                <a class="page-link" href="#">2</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">3</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#"><i class="fas fa-forward"></i></a>
-              </li>
-            </ul><!-- .pagination -->
+          
           </div><!-- .table-responsive -->
         </div><!-- .card-body -->
         <div class="card-footer">
