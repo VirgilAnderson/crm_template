@@ -9,9 +9,9 @@
   // Pagination
   $current_page = $_GET['page'] ?? 1;
   $per_page = 15;
-  $total_count = Lead::count_all_user_leads($uid);
-
+  $total_count = Lead::count_all_user_records($uid);
   $pagination = new Pagination($current_page, $per_page, $total_count);
+  $total_pages = $pagination->total_pages();
 
   // Find all open user leads query
   $sql = "SELECT * FROM lead ";
@@ -24,7 +24,6 @@
   $sql .= "OFFSET {$pagination->offset()} ";
   $lead = Lead::find_by_sql($sql);
 
-  $total_pages = $pagination->total_pages();
 ?>
 
 <?php $page_title = "Leads"; ?>

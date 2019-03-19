@@ -3,11 +3,26 @@
   // Ensure User Logged In
   require_login();
 
+  $uid = $session->user_id;
+  $user = User::find_by_id($uid);
+
+  // Pagination
+  $current_page = $_GET['page'] ?? 1;
+  $per_page = 15;
+  $total_count = Contact::count_all_user_records($uid);
+
+  $pagination = new Pagination($current_page, $per_page, $total_count);
+
+
   // Find all user contacts query
   $sql = "SELECT * FROM contact ";
   $sql .= "WHERE user_id=" . $session->user_id;
-  $sql .= " ORDER BY id DESC";
+  $sql .= " ORDER BY id DESC ";
+  $sql .= "LIMIT {$per_page} ";
+  $sql .= "OFFSET {$pagination->offset()} ";
   $contact = Contact::find_by_sql($sql);
+
+  $total_pages = $pagination->total_pages();
 
 ?>
 
@@ -67,23 +82,17 @@
           </div><!-- .table-responsive -->
 
           <!-- pagination -->
-          <ul class="pagination pagination-sm justify-content-center">
-            <li class="page-item">
-              <a class="page-link" href="#"><i class="fas fa-backward"></i></a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item active">
-              <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">3</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#"><i class="fas fa-forward"></i></a>
-            </li>
-          </ul><!-- .pagination -->
+          <?php
+            if($total_pages > 1) {
+              echo "<ul class=\"pagination pagination-sm justify-content-center\">";
+
+              $url = url_for('/contacts/index.php');
+              echo $pagination->previous_link($url);
+              echo $pagination->number_links($url);
+              echo $pagination->next_link($url);
+              echo "</ul><!-- .pagination -->";
+            }
+          ?><!-- .pagination -->
         </div><!-- .card-body -->
         <div class="card-footer">
           <a href="<?php echo url_for('Contacts/new.php'); ?>" class="btn btn-outline-info mb-2" role="button"><i class="far fa-plus-square"></i> new Contact</a>

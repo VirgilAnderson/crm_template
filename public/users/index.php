@@ -7,9 +7,18 @@
   // Ensure User is Admin
   require_admin();
 
+  // Pagination
+  $current_page = $_GET['page'] ?? 1;
+  $per_page = 15;
+  $total_count = User::count_all();
+  $pagination = new Pagination($current_page, $per_page, $total_count);
+  $total_pages = $pagination->total_pages();
+
   // Find all user query
   $sql = "SELECT * FROM user ";
-  $sql .= "ORDER BY id DESC";
+  $sql .= " ORDER BY id DESC ";
+  $sql .= "LIMIT {$per_page} ";
+  $sql .= "OFFSET {$pagination->offset()} ";
   $user = User::find_by_sql($sql);
 
 ?>
@@ -70,23 +79,17 @@
           </div><!-- .table-responsive -->
 
           <!-- pagination -->
-          <ul class="pagination pagination-sm justify-content-center">
-            <li class="page-item">
-              <a class="page-link" href="#"><i class="fas fa-backward"></i></a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item active">
-              <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">3</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#"><i class="fas fa-forward"></i></a>
-            </li>
-          </ul><!-- .pagination -->
+          <?php
+            if($total_pages > 1) {
+              echo "<ul class=\"pagination pagination-sm justify-content-center\">";
+
+              $url = url_for('/users/index.php');
+              echo $pagination->previous_link($url);
+              echo $pagination->number_links($url);
+              echo $pagination->next_link($url);
+              echo "</ul><!-- .pagination -->";
+            }
+          ?><!-- .pagination -->
         </div><!-- .card-body -->
         <div class="card-footer">
           <a href="<?php echo url_for('users/new.php'); ?>" class="btn btn-outline-info mb-2" role="button"><i class="far fa-plus-square"></i> New User</a>
