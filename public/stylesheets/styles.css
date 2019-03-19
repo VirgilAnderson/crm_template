@@ -18,3 +18,9 @@ body {
 .errors ul {
   list-style-type: none;
 }
+.task {
+  display: none;
+}
+.task.active {
+  display: inline;
+}
