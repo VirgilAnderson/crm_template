@@ -46,9 +46,9 @@
       link_element[i].className = 'page-item task_link';
     }
   }
-  // Initialize list
-  initializeTask();
-
-  // add forward button event handler
-  var button_next_task = document.getElementById('task_next_button');
-  button_next_task.addEventListener('click', next_task);
+  // Count how many links
+  var link_count = document.getElementsByClassName('task_link').length;
+  if(link_count > 0) {
+    // Initialize list
+    initializeTask();
+  }
