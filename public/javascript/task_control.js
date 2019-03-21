@@ -4,7 +4,7 @@
 
     // Add active to the selected class
     var pane = document.getElementById(selected);
-    pane.classList.add("active");
+    pane.className = 'task active';
 
     // Add active to the active pagination button
     var link_id = "link_" + selected;
@@ -47,7 +47,7 @@
     }
   }
   // Count how many links
-  var link_count = document.getElementsByClassName('task_link').length;
+  var link_count = document.getElementsByClassName('task').length;
   if(link_count > 0) {
     // Initialize list
     initializeTask();
