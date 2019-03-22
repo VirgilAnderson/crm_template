@@ -36,8 +36,6 @@ function appendToDiv(div, new_html) {
 function build_contact_pane() {
 
   showSpinner();
-
-
   var xhr = new XMLHttpRequest();
   xhr.open('GET', '../../private/shared/ajax/contact_pagination.php?contact_pane=1&uid=2', true);
   xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
